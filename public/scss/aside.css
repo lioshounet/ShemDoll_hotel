@@ -1,0 +1,8 @@
+.el-menu-item-group__title {
+  display: none;
+}
+
+.el-menu-item:focus {
+  background-color: #68d5c4;
+  color: white;
+}
