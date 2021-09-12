@@ -37,9 +37,13 @@
       </el-aside>
 
       <el-container>
-        <el-header style="text-align: right; font-size: 12px"> </el-header>
+        <el-header>{{ userinfo[0].name }}</el-header>
 
-        <el-main> </el-main>
+        <el-main>
+          <div>
+            <myinfo></myinfo>
+          </div>
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -48,12 +52,7 @@
 <style>
 @import url("//unpkg.com/element-ui@2.15.5/lib/theme-chalk/index.css");
 @import url("./../public/scss/aside.css");
-
-.el-header {
-  background-color: #b3c0d1;
-  color: #333;
-  line-height: 60px;
-}
+@import url("./../public/scss/el-header.css");
 
 .el-container {
   height: 1500px;
@@ -86,3 +85,19 @@
   color: #42b983;
 }
 </style>
+<script>
+import myinfo from "./components/home/myinfo";
+export default {
+  components: { myinfo },
+  name: "sheet",
+  data() {
+    var _this = this;
+    this.$http.get("json/home/userinfo.json").then(function (res) {
+      _this.userinfo = res.data;
+    });
+    return {
+      userinfo: [],
+    };
+  },
+};
+</script>

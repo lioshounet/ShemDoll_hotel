@@ -1,0 +1,13 @@
+.bgimg {
+  width: 100%;
+  height: 300px;
+  background-color: #a30606;
+}
+
+.el-select .el-input {
+  width: 130px;
+}
+
+.input-with-select .el-input-group__prepend {
+  background-color: #fff;
+}
