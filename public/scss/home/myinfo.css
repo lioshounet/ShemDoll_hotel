@@ -11,3 +11,12 @@
 .input-with-select .el-input-group__prepend {
   background-color: #fff;
 }
+
+.info {
+  margin-top: 140px;
+}
+
+.info .el-input {
+  width: 400px;
+  margin-bottom: 40px;
+}
