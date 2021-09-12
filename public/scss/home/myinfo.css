@@ -1,7 +1,22 @@
 .bgimg {
   width: 100%;
   height: 300px;
-  background-color: #a30606;
+  background-color: rgba(163, 6, 6, 0);
+}
+
+.bgimg .headimg {
+  position: relative;
+  height: 285px;
+  width: 285px;
+  background-color: #68d5c4;
+  border-radius: 50%;
+  top: -51%;
+  left: 10%;
+}
+
+.bgimg .headimg img {
+  border-radius: 50%;
+  margin: 4px;
 }
 
 .el-select .el-input {
