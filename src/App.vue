@@ -9,7 +9,9 @@
               主页
             </template>
             <el-menu-item-group>
-              <el-menu-item index="1-1">个人信息</el-menu-item>
+              <el-menu-item index="1-1" @click="myinfo()">
+                个人信息
+              </el-menu-item>
               <el-menu-item index="1-2">钱包</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
@@ -37,11 +39,14 @@
       </el-aside>
 
       <el-container>
-        <el-header>{{ userinfo[0].name }}</el-header>
+        <el-header>
+          <p class="userid">ID:{{ userinfo[0].ID }}</p>
+          <p class="username">{{ userinfo[0].name }}</p>
+        </el-header>
 
         <el-main>
           <div>
-            <myinfo></myinfo>
+            <bodymain></bodymain>
           </div>
         </el-main>
       </el-container>
@@ -86,10 +91,11 @@
 }
 </style>
 <script>
-import myinfo from "./components/home/myinfo";
+import bodymain from "./bodymain";
+import Msg from "./msg.js";
 export default {
-  components: { myinfo },
-  name: "sheet",
+  components: { bodymain },
+  // name: "sheet",
   data() {
     var _this = this;
     this.$http.get("json/home/userinfo.json").then(function (res) {
@@ -98,6 +104,12 @@ export default {
     return {
       userinfo: [],
     };
+  },
+  methods: {
+    myinfo: function () {
+      //核心代码
+      Msg.$emit("showwhat", "myinfo");
+    },
   },
 };
 </script>

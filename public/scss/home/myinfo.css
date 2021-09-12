@@ -6,8 +6,8 @@
 
 .bgimg .headimg {
   position: relative;
-  height: 285px;
-  width: 285px;
+  height: 300px;
+  width: 300px;
   background-color: #68d5c4;
   border-radius: 50%;
   top: -51%;
@@ -16,7 +16,7 @@
 
 .bgimg .headimg img {
   border-radius: 50%;
-  margin: 4px;
+  margin: 11px;
 }
 
 .el-select .el-input {

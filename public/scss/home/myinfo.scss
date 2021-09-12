@@ -2,6 +2,8 @@ $el-submenu-color:rgba(22, 7, 7, 0);
 $gree-color:rgb(104, 213, 196);
 $white-color:rgb(255, 255, 255);
 $litlle-bule:rgb(0, 207, 232);
+$bigsize:300px;
+$headimgsize:278px;
 
 .bgimg{
     width: 100%;
@@ -9,15 +11,16 @@ $litlle-bule:rgb(0, 207, 232);
     background-color: rgba(163, 6, 6, 0);
     .headimg{
         position: relative;
-        height: 285px;
-        width: 285px;
+        height: $bigsize;
+        width: $bigsize;
         background-color: $gree-color;
         border-radius: 50%;
         top: -51%;
         left: 10%;
         img{
             border-radius: 50%;
-            margin: 4px
+            // margin: 11px;
+            margin: ($bigsize - $headimgsize)/2;
         }
     }
 }
