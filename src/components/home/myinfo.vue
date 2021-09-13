@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bgimg">
-      <img v-bind:src="userinfo[0].bgimg" alt="" />
+      <img v-bind:src="userinfo[0].bgimg" alt="" width="1643px" />
       <div class="headimg">
         <img
           v-bind:src="userinfo[0].headimg"

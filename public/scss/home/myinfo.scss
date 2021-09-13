@@ -35,9 +35,38 @@ $headimgsize:278px;
 }
 
 .info{
+    // background-color: $gree-color;
+    width: 100%;
     margin-top: 140px;
     .el-input{
+        height: 50px;
         width: 400px;
+       .el-input-group__prepend{
+            font-size: 22px;
+        }
+        input{
+            font-size: 22px;
+            height: 50px;
+        }
         margin-bottom: 40px;
+    }
+    .el-button{
+        width: 400px;
+        background-color: $gree-color;
+        color:$white-color;
+        border:2px solid $gree-color;
+        font-size: 22px;
+        &:hover{
+            color: $gree-color;
+            background-color:$white-color;
+            border-color: $gree-color;
+        }
+        &:focus{
+            width: 400px;
+            background-color: $gree-color;
+            color:$white-color;
+            border:2px solid $gree-color;
+            font-size: 22px;
+        }
     }
 }

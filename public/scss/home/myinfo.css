@@ -28,10 +28,43 @@
 }
 
 .info {
+  width: 100%;
   margin-top: 140px;
 }
 
 .info .el-input {
+  height: 50px;
   width: 400px;
   margin-bottom: 40px;
+}
+
+.info .el-input .el-input-group__prepend {
+  font-size: 22px;
+}
+
+.info .el-input input {
+  font-size: 22px;
+  height: 50px;
+}
+
+.info .el-button {
+  width: 400px;
+  background-color: #68d5c4;
+  color: white;
+  border: 2px solid #68d5c4;
+  font-size: 22px;
+}
+
+.info .el-button:hover {
+  color: #68d5c4;
+  background-color: white;
+  border-color: #68d5c4;
+}
+
+.info .el-button:focus {
+  width: 400px;
+  background-color: #68d5c4;
+  color: white;
+  border: 2px solid #68d5c4;
+  font-size: 22px;
 }

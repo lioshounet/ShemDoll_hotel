@@ -12,7 +12,7 @@
               <el-menu-item index="1-1" @click="myinfo()">
                 个人信息
               </el-menu-item>
-              <el-menu-item index="1-2">钱包</el-menu-item>
+              <el-menu-item index="1-2" @click="wallet()">钱包</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="2">
@@ -107,8 +107,10 @@ export default {
   },
   methods: {
     myinfo: function () {
-      //核心代码
       Msg.$emit("showwhat", "myinfo");
+    },
+    wallet: function () {
+      Msg.$emit("showwhat", "wallet");
     },
   },
 };
