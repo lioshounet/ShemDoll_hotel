@@ -1,6 +1,7 @@
 $el-submenu-color:rgba(22, 7, 7, 0);
 $gree-color:rgb(104, 213, 196);
 $white-color:rgb(255, 255, 255);
+$litlle-bule:rgb(0, 207, 232);
 
 .el-menu-item-group__title{
     display: none;
@@ -9,7 +10,9 @@ $white-color:rgb(255, 255, 255);
 //     background-color:rgb(104, 213, 196);
 // }
 
-.el-menu-item:focus{
-    background-color:$gree-color;
-    color:$white-color;
+.el-menu-item{
+    &:focus{
+        background-color:$gree-color;
+        color:$white-color;
+    }
 }

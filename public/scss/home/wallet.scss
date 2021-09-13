@@ -1,0 +1,105 @@
+$el-submenu-color:rgba(22, 7, 7, 0);
+$gree-color:rgb(104, 213, 196);
+$white-color:rgb(255, 255, 255);
+$litlle-bule:rgb(0, 207, 232);
+$bigsize:300px;
+$headimgsize:240px;
+//此处的240是图片大小
+$inputw:300px;
+
+.frbox{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: $gree-color;
+    .headimg{
+        text-align: left;
+        img{
+            // position: relative;
+            // display: inline-block;
+            text-align: left;
+            position: absolute;
+            margin-top: ($bigsize - $headimgsize)/2;
+            margin-left:($bigsize - $headimgsize)/2;
+        }
+    }
+    .monney{
+        // display: inline-block;
+        position: absolute;
+        text-align: left;
+        font-size: 34px;
+        margin-top: ($bigsize - $headimgsize)/2;
+        margin-left:($bigsize - $headimgsize)/2 + $bigsize;
+        color:$white-color;
+        p{
+            border-top: 2px solid $white-color;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+        }
+    }
+    .givemonney{
+        position: absolute;
+        text-align: left;
+        top: ($bigsize - $headimgsize)/2 + 120px ;
+        left: ($bigsize - $headimgsize)/2 + $bigsize;
+        .chash{
+            position: relative;
+            margin-bottom: 20px;
+            .el-input{
+                position: relative;
+                // height: 50px;
+                width: $inputw;
+                // font-size: 20px;
+              
+            }
+            .el-button{
+                width: 140px;
+                margin-left: 100px;
+                background-color: rgba(255, 255, 255, 0);
+                border: 2px solid $white-color;
+                color: $white-color;
+                // font-size: 18px;
+                &:hover{
+                    background-color: $white-color;
+                    color: $gree-color;
+                }
+            }
+        }
+        .moneykey{
+            position: relative;
+            .el-input{
+                position: relative;
+                width: $inputw;
+                
+            }
+            .el-button{
+                width: 140px;
+                margin-left: 100px;
+                background-color: rgba(255, 255, 255, 0);
+                border: 2px solid $white-color;
+                color: $white-color;
+                &:hover{
+                    background-color: $white-color;
+                    color: $gree-color;
+                }
+            }
+        }
+      
+        // font-size: 40px;
+        // margin-top: ($bigsize - $headimgsize)/2;
+        // margin-left:($bigsize - $headimgsize)/2 + $bigsize;
+        // color:$white-color;
+      
+    }
+}
+
+.costlist{
+    // background-color: $gree-color;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(61, 146, 11);
+    // margin-top: 140px;
+}
