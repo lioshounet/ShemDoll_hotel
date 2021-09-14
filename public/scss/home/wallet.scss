@@ -5,7 +5,8 @@ $litlle-bule:rgb(0, 207, 232);
 $bigsize:300px;
 $headimgsize:240px;
 //此处的240是图片大小
-$inputw:300px;
+$inputw:370px;
+$inputh:50px;
 
 .frbox{
     width: 100%;
@@ -52,12 +53,18 @@ $inputw:300px;
                 position: relative;
                 // height: 50px;
                 width: $inputw;
-                // font-size: 20px;
+                height: $inputh;
+                font-size: 22px;
+                input{
+                    height: $inputh;
+                }
               
             }
             .el-button{
+                height: $inputh;
                 width: 140px;
                 margin-left: 100px;
+                font-size: 20px;
                 background-color: rgba(255, 255, 255, 0);
                 border: 2px solid $white-color;
                 color: $white-color;
@@ -72,12 +79,19 @@ $inputw:300px;
             position: relative;
             .el-input{
                 position: relative;
+                // height: 50px;
                 width: $inputw;
-                
+                height: $inputh;
+                font-size: 22px;
+                input{
+                    height: $inputh;
+                }
             }
             .el-button{
+                height: $inputh;
                 width: 140px;
                 margin-left: 100px;
+                font-size: 20px;
                 background-color: rgba(255, 255, 255, 0);
                 border: 2px solid $white-color;
                 color: $white-color;
@@ -88,10 +102,6 @@ $inputw:300px;
             }
         }
       
-        // font-size: 40px;
-        // margin-top: ($bigsize - $headimgsize)/2;
-        // margin-left:($bigsize - $headimgsize)/2 + $bigsize;
-        // color:$white-color;
       
     }
 }
