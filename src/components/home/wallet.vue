@@ -30,7 +30,17 @@
         <!-- <el-button>充值码充值</el-button> -->
       </div>
     </div>
-    <div class="costlist">256</div>
+    <div class="costlist">
+      <el-table :data="costData">
+        <el-table-column prop="date" label="日期" width="200">
+        </el-table-column>
+        <el-table-column prop="RevenueExpenditure" label="支出/收入">
+        </el-table-column>
+        <el-table-column prop="howmach" label="金额"> </el-table-column>
+        <el-table-column prop="where" label="来源"> </el-table-column>
+        <el-table-column prop="nmb" label="订单号码"> </el-table-column>
+      </el-table>
+    </div>
   </div>
 </template>
 <style>
@@ -46,11 +56,13 @@ export default {
     this.$http.get("json/home/userinfo.json").then(function (res) {
       _this.userinfo = res.data;
     });
+    this.$http.get("json/home/costlist.json").then(function (ress) {
+      _this.costData = ress.data;
+    });
     return {
+      //用户基本信息返回
       userinfo: [],
-      input1: "",
-      input2: "",
-      input3: "",
+      costData: [],
     };
   },
 };
