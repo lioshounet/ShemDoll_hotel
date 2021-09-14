@@ -21,7 +21,7 @@
               房间操作
             </template>
             <el-menu-item-group>
-              <el-menu-item index="2-1">订房</el-menu-item>
+              <el-menu-item index="2-1" @click="book()">订房</el-menu-item>
               <el-menu-item index="2-2">退房</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
@@ -111,6 +111,9 @@ export default {
     },
     wallet: function () {
       Msg.$emit("showwhat", "wallet");
+    },
+    book: function () {
+      Msg.$emit("showwhat", "book");
     },
   },
 };
