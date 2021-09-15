@@ -3,17 +3,83 @@ $gree-color:rgb(104, 213, 196);
 $white-color:rgb(255, 255, 255);
 $litlle-bule:rgb(0, 207, 232);
 $bigsize:300px;
-$headimgsize:240px;
+$imgsize:200px;
 //此处的240是图片大小
-$inputw:370px;
-$inputh:50px;
 
 .el-dropdown-link {
     cursor: pointer;
     color: #409EFF;
-  
 }
 .el-icon-arrow-down {
     font-size: 12px;
 
+}
+
+
+.el-tabs{
+    .el-tabs__nav{
+        div{
+            width: 200px;
+            font-size: 25px;
+            line-height: 100%;
+        }
+    }
+    .el-collapse-item__header{ 
+        height: 55px !important;
+        font-size: 20px !important;
+    }
+    .appealroom{
+        .bookcboxs,.nouseboxs,.otherboxs{
+            text-align: left;
+            .box-card {
+                img{
+                    float: left;
+                }
+                display: inline-block;
+                width: 40%;
+                height: $imgsize*1.5;
+                margin-left: 5%;
+                margin-bottom: 20px;
+                text-align: left;
+                .textbox{
+                    padding-top:2%;
+                    float: left;
+                    width: $imgsize*1.5;
+                    margin-left:50px;
+                    .text{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.boxs{
+    text-align: left;
+ 
+    .box-card {
+        img{
+            float: left;
+        }
+        display: inline-block;
+        width: 480px;
+        height: $imgsize*1.5;
+        margin: 10px;
+        text-align: left;
+        .textbox{
+            padding-top:40px;
+            float: left;
+            margin-left:50px;
+            height: $imgsize - 40;
+            .text{
+                font-size: 15px;
+            }
+            // margin-bottom: 0px;
+        }
+       
+    }
 }
