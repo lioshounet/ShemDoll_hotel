@@ -2,14 +2,20 @@
   <div>
     <myinfo v-if="xi == 'myinfo'"></myinfo>
     <wallet v-if="xi == 'wallet'"></wallet>
+    <book v-if="xi == 'book'"></book>
+    <CheckOut v-if="xi == 'CheckOut'"></CheckOut>
+    <funroom v-if="xi == 'funroom'"></funroom>
   </div>
 </template>
 <script>
 import myinfo from "./components/home/myinfo";
 import wallet from "./components/home/wallet";
+import book from "./components/room/book";
+import CheckOut from "./components/room/CheckOut";
+import funroom from "./components/fun/funroom";
 import Msg from "./msg.js";
 export default {
-  components: { myinfo, wallet },
+  components: { myinfo, wallet, book, CheckOut, funroom },
   data() {
     return {
       xi: "",

@@ -1,0 +1,51 @@
+$el-submenu-color:rgba(22, 7, 7, 0);
+$gree-color:rgb(104, 213, 196);
+$white-color:rgb(255, 255, 255);
+$litlle-bule:rgb(0, 207, 232);
+$bigsize:300px;
+$imgsize:200px;
+//此处的240是图片大小
+
+
+.text {
+    font-size: 14px;
+}
+
+.item {
+    margin-bottom: 18px;
+}
+
+.clearfix:before,.clearfix:after {
+    display: table;
+    content: "";
+}
+  
+.clearfix:after {
+    clear: both
+}
+
+.boxs{
+    text-align: left;
+ 
+    .box-card {
+        img{
+            float: left;
+        }
+        display: inline-block;
+        width: 480px;
+        height: $imgsize*1.5;
+        margin: 10px;
+        text-align: left;
+        .textbox{
+            padding-top:40px;
+            float: left;
+            margin-left:50px;
+            height: $imgsize - 40;
+            .text{
+                font-size: 15px;
+            }
+            // margin-bottom: 0px;
+        }
+       
+    }
+}

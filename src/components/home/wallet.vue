@@ -15,13 +15,13 @@
       </div>
       <div class="givemonney">
         <div class="chash">
-          <el-input placeholder="请输入金额">
+          <el-input placeholder="请输入金额" v-model="input1">
             <template slot="prepend">金额</template>
           </el-input>
           <el-button>充值</el-button>
         </div>
         <div class="moneykey">
-          <el-input placeholder="请输入激活码">
+          <el-input placeholder="请输入激活码" v-model="input2">
             <template slot="prepend">激活码</template>
           </el-input>
           <el-button>激活码充值</el-button>
@@ -31,13 +31,13 @@
       </div>
     </div>
     <div class="costlist">
-      <el-table :data="costData">
+      <el-table :data="costData" stripe>
         <el-table-column prop="date" label="日期" width="200">
         </el-table-column>
         <el-table-column prop="RevenueExpenditure" label="支出/收入">
         </el-table-column>
         <el-table-column prop="howmach" label="金额"> </el-table-column>
-        <el-table-column prop="where" label="来源"> </el-table-column>
+        <el-table-column prop="where" label="资金流动"> </el-table-column>
         <el-table-column prop="nmb" label="订单号码"> </el-table-column>
       </el-table>
     </div>
@@ -63,6 +63,8 @@ export default {
       //用户基本信息返回
       userinfo: [],
       costData: [],
+      input1: "",
+      input2: "",
     };
   },
 };
