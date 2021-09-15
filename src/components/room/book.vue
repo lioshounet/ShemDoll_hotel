@@ -3,9 +3,9 @@
     <div class="boxs">
       <el-card class="box-card" v-for="card in roomlist">
         <div slot="header" class="clearfix">
-          <span>卡片名称</span>
+          <span>{{ card.hotlename }}</span>
           <el-button style="float: right; padding: 3px 0" type="text"
-            >操作按钮
+            >查看详情
           </el-button>
         </div>
         <img v-bind:src="card.link" alt="" width="200PX" />

@@ -22,7 +22,9 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="2-1" @click="book()">订房</el-menu-item>
-              <el-menu-item index="2-2">退房</el-menu-item>
+              <el-menu-item index="2-2" @click="CheckOut()"
+                >我的房间</el-menu-item
+              >
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="3">
@@ -31,7 +33,9 @@
               其他服务
             </template>
             <el-menu-item-group>
-              <el-menu-item index="3-1">功能房预约</el-menu-item>
+              <el-menu-item index="3-1" @click="funroom()"
+                >功能房预约</el-menu-item
+              >
               <el-menu-item index="3-2">订餐到房</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
@@ -114,6 +118,12 @@ export default {
     },
     book: function () {
       Msg.$emit("showwhat", "book");
+    },
+    CheckOut: function () {
+      Msg.$emit("showwhat", "CheckOut");
+    },
+    funroom: function () {
+      Msg.$emit("showwhat", "funroom");
     },
   },
 };

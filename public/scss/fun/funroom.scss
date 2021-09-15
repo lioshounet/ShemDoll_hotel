@@ -1,0 +1,41 @@
+$el-submenu-color:rgba(22, 7, 7, 0);
+$gree-color:rgb(104, 213, 196);
+$white-color:rgb(255, 255, 255);
+$litlle-bule:rgb(0, 207, 232);
+$bigsize:300px;
+$imgsize:200px;
+//此处的240是图片大小
+.el-tabs{
+    .el-tabs__nav{
+        div{
+            width: 200px;
+            font-size: 25px;
+            line-height: 100%;
+        }
+    }
+    .el-tab-pane{
+        font-size: 20px;
+    }
+    .box-card {
+        text-align: left;
+        img{
+            float: left;
+        }
+        display: inline-block;
+        width: 480px;
+        height: $imgsize*1.5;
+        margin: 10px;
+        text-align: left;
+        .textbox{
+            padding-top:40px;
+            float: left;
+            margin-left:50px;
+            height: $imgsize - 40;
+            .text{
+                font-size: 15px;
+            }
+            // margin-bottom: 0px;
+        }
+       
+    }
+}
