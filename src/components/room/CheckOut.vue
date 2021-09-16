@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-tabs v-model="activeName" @tab-click="handleClick">
+    <el-tabs v-model="activeName" @tab-click="handleClick" class="ch-el-tabs">
       <el-tab-pane label="已经预订" name="first">
         <div class="boxs">
           <el-card class="box-card" v-for="card in booklist">

@@ -33,10 +33,12 @@
               其他服务
             </template>
             <el-menu-item-group>
-              <el-menu-item index="3-1" @click="funroom()"
-                >功能房预约</el-menu-item
-              >
-              <el-menu-item index="3-2">订餐到房</el-menu-item>
+              <el-menu-item index="3-1" @click="funroom()">
+                功能房预约
+              </el-menu-item>
+              <el-menu-item index="3-2" @click="food()">
+                订餐到房
+              </el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
@@ -124,6 +126,9 @@ export default {
     },
     funroom: function () {
       Msg.$emit("showwhat", "funroom");
+    },
+    food: function () {
+      Msg.$emit("showwhat", "food");
     },
   },
 };

@@ -1,14 +1,8 @@
-.el-tabs .el-tabs__nav div {
-  width: 200px;
-  font-size: 25px;
-  line-height: 100%;
+.fu-el-tabs .el-tabs__item {
+  line-height: 40px;
 }
 
-.el-tabs .el-tab-pane {
-  font-size: 20px;
-}
-
-.el-tabs .box-card {
+.fu-el-tabs .box-card {
   text-align: left;
   display: inline-block;
   width: 480px;
@@ -17,17 +11,17 @@
   text-align: left;
 }
 
-.el-tabs .box-card img {
+.fu-el-tabs .box-card img {
   float: left;
 }
 
-.el-tabs .box-card .textbox {
+.fu-el-tabs .box-card .textbox {
   padding-top: 40px;
   float: left;
   margin-left: 50px;
   height: 160px;
 }
 
-.el-tabs .box-card .textbox .text {
+.fu-el-tabs .box-card .textbox .text {
   font-size: 15px;
 }

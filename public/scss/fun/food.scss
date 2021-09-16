@@ -5,15 +5,16 @@ $litlle-bule:rgb(0, 207, 232);
 $bigsize:300px;
 $imgsize:200px;
 //此处的240是图片大小
-.fu-el-tabs{
+.fo-el-tabs{
     .el-tabs__item{
        line-height: 40px;
     }
-    .el-tab-pane{
-        // font-size: 20px;
-    }
+}
+
+.aboxs,.nboxs,.wboxs,.sboxs{
+    text-align: left;
+ 
     .box-card {
-        text-align: left;
         img{
             float: left;
         }
