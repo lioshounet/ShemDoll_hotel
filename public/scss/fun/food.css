@@ -1,0 +1,30 @@
+.fo-el-tabs .el-tabs__item {
+  line-height: 40px;
+}
+
+.aboxs, .nboxs, .wboxs, .sboxs {
+  text-align: left;
+}
+
+.aboxs .box-card, .nboxs .box-card, .wboxs .box-card, .sboxs .box-card {
+  display: inline-block;
+  width: 480px;
+  height: 300px;
+  margin: 10px;
+  text-align: left;
+}
+
+.aboxs .box-card img, .nboxs .box-card img, .wboxs .box-card img, .sboxs .box-card img {
+  float: left;
+}
+
+.aboxs .box-card .textbox, .nboxs .box-card .textbox, .wboxs .box-card .textbox, .sboxs .box-card .textbox {
+  padding-top: 40px;
+  float: left;
+  margin-left: 50px;
+  height: 160px;
+}
+
+.aboxs .box-card .textbox .text, .nboxs .box-card .textbox .text, .wboxs .box-card .textbox .text, .sboxs .box-card .textbox .text {
+  font-size: 15px;
+}

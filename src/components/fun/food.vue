@@ -1,9 +1,9 @@
 <template>
   <div>
-    <el-tabs type="border-card" class="fu-el-tabs">
-      <el-tab-pane label="游泳池">
+    <el-tabs type="border-card" class="fo-el-tabs">
+      <el-tab-pane label="下午茶">
         <div class="aboxs">
-          <el-card class="box-card" v-for="card in funroom">
+          <el-card class="box-card" v-for="card in tealist">
             <div slot="header" class="clearfix">
               <span>{{ card.name }}</span>
               <el-button style="float: right; padding: 3px 0" type="text"
@@ -23,13 +23,13 @@
               </div>
             </div>
           </el-card>
-        </div></el-tab-pane
-      >
-      <el-tab-pane label="健身房">
-        <div class="aboxs">
-          <el-card class="box-card" v-for="card in funroom">
+        </div>
+      </el-tab-pane>
+      <el-tab-pane label="夜宵">
+        <div class="nboxs">
+          <el-card class="box-card" v-for="card in nightfoodlist">
             <div slot="header" class="clearfix">
-              <span>健身房</span>
+              <span>{{ card.name }}</span>
               <el-button style="float: right; padding: 3px 0" type="text"
                 >查看详情
               </el-button>
@@ -49,11 +49,35 @@
           </el-card>
         </div>
       </el-tab-pane>
-      <el-tab-pane label="个人书房"
-        ><div class="aboxs">
-          <el-card class="box-card" v-for="card in funroom">
+      <el-tab-pane label="三明治">
+        <div class="sboxs">
+          <el-card class="box-card" v-for="card in tealist">
             <div slot="header" class="clearfix">
-              <span>个人书房</span>
+              <span>三明治</span>
+              <el-button style="float: right; padding: 3px 0" type="text"
+                >查看详情
+              </el-button>
+            </div>
+            <img v-bind:src="card.link" alt="" width="200PX" />
+            <!-- <img src="/img/userinfo/indoors-4234071_1920.png" alt="" /> -->
+            <div class="textbox">
+              <div
+                v-for="(item, o, i) in card"
+                :key="o"
+                v-if="i != 4"
+                class="text item"
+              >
+                {{ cardmarklist[i] + ":" + item }}
+              </div>
+            </div>
+          </el-card>
+        </div></el-tab-pane
+      >
+      <el-tab-pane label="酒精饮料">
+        <div class="wboxs">
+          <el-card class="box-card" v-for="card in tealist">
+            <div slot="header" class="clearfix">
+              <span>酒精饮料</span>
               <el-button style="float: right; padding: 3px 0" type="text"
                 >查看详情
               </el-button>
@@ -77,7 +101,7 @@
   </div>
 </template>
 <style>
-@import url("./../../../public/scss/fun/funroom.css");
+@import url("./../../../public/scss/fun/food.css");
 </style>
 <script>
 export default {
@@ -89,14 +113,18 @@ export default {
     this.$http.get("json/home/userinfo.json").then(function (res) {
       _this.userinfo = res.data;
     });
-    this.$http.get("json/fun/funroom.json").then(function (res) {
-      _this.funroom = res.data;
+    this.$http.get("json/fun/food/tea.json").then(function (res) {
+      _this.tealist = res.data;
+    });
+    this.$http.get("json/fun/food/nightfood.json").then(function (res) {
+      _this.nightfoodlist = res.data;
     });
     return {
       //用户基本信息返回
       userinfo: [],
-      funroom: [],
       activeNames: ["1"],
+      tealist: [],
+      nightfoodlist: [],
       cardmarklist: ["食品名字", "编号", "价格", "描述"],
     };
   },

@@ -7,22 +7,22 @@
   font-size: 12px;
 }
 
-.el-tabs .el-tabs__nav div {
+.ch-el-tabs .el-tabs__nav div {
   width: 200px;
   font-size: 25px;
   line-height: 100%;
 }
 
-.el-tabs .el-collapse-item__header {
+.ch-el-tabs .el-collapse-item__header {
   height: 55px !important;
   font-size: 20px !important;
 }
 
-.el-tabs .appealroom .bookcboxs, .el-tabs .appealroom .nouseboxs, .el-tabs .appealroom .otherboxs {
+.ch-el-tabs .appealroom .bookcboxs, .ch-el-tabs .appealroom .nouseboxs, .ch-el-tabs .appealroom .otherboxs {
   text-align: left;
 }
 
-.el-tabs .appealroom .bookcboxs .box-card, .el-tabs .appealroom .nouseboxs .box-card, .el-tabs .appealroom .otherboxs .box-card {
+.ch-el-tabs .appealroom .bookcboxs .box-card, .ch-el-tabs .appealroom .nouseboxs .box-card, .ch-el-tabs .appealroom .otherboxs .box-card {
   display: inline-block;
   width: 40%;
   height: 300px;
@@ -31,18 +31,18 @@
   text-align: left;
 }
 
-.el-tabs .appealroom .bookcboxs .box-card img, .el-tabs .appealroom .nouseboxs .box-card img, .el-tabs .appealroom .otherboxs .box-card img {
+.ch-el-tabs .appealroom .bookcboxs .box-card img, .ch-el-tabs .appealroom .nouseboxs .box-card img, .ch-el-tabs .appealroom .otherboxs .box-card img {
   float: left;
 }
 
-.el-tabs .appealroom .bookcboxs .box-card .textbox, .el-tabs .appealroom .nouseboxs .box-card .textbox, .el-tabs .appealroom .otherboxs .box-card .textbox {
+.ch-el-tabs .appealroom .bookcboxs .box-card .textbox, .ch-el-tabs .appealroom .nouseboxs .box-card .textbox, .ch-el-tabs .appealroom .otherboxs .box-card .textbox {
   padding-top: 2%;
   float: left;
   width: 300px;
   margin-left: 50px;
 }
 
-.el-tabs .appealroom .bookcboxs .box-card .textbox .text, .el-tabs .appealroom .nouseboxs .box-card .textbox .text, .el-tabs .appealroom .otherboxs .box-card .textbox .text {
+.ch-el-tabs .appealroom .bookcboxs .box-card .textbox .text, .ch-el-tabs .appealroom .nouseboxs .box-card .textbox .text, .ch-el-tabs .appealroom .otherboxs .box-card .textbox .text {
   font-size: 15px;
 }
 
