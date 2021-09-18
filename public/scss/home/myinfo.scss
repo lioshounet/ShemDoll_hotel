@@ -42,11 +42,29 @@ $headimgsize:278px;
         height: 50px;
         width: 400px;
        .el-input-group__prepend{
+            border-color: $gree-color;
+            background-color: $gree-color;
+            color:$white-color;
             font-size: 22px;
         }
         input{
+            background:$white-color;
+            border-color: $gree-color;
+            color: $gree-color;
             font-size: 22px;
             height: 50px;
+        }
+        ::-webkit-input-placeholder{
+            color:$gree-color;
+        }
+        :-ms-input-placeholder{
+            color:$gree-color;
+        }
+        :-moz-placeholder{
+            color:$gree-color;
+        }
+        ::-moz-placeholder{
+            color:$gree-color;
         }
         margin-bottom: 40px;
     }

@@ -1,4 +1,7 @@
 .el-header {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
   background-color: #68d5c4;
   color: white;
 }

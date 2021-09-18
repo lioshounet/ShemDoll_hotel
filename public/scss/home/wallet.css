@@ -53,8 +53,33 @@
   font-size: 20px;
 }
 
+.frbox .givemonney .chash .el-input .el-input-group__prepend {
+  border-color: white;
+  background-color: #68d5c4;
+  color: white;
+}
+
 .frbox .givemonney .chash .el-input input {
+  background: white;
+  border-color: white;
+  color: #68d5c4;
   height: 50px;
+}
+
+.frbox .givemonney .chash ::-webkit-input-placeholder {
+  color: #68d5c4;
+}
+
+.frbox .givemonney .chash :-ms-input-placeholder {
+  color: #68d5c4;
+}
+
+.frbox .givemonney .chash :-moz-placeholder {
+  color: #68d5c4;
+}
+
+.frbox .givemonney .chash ::-moz-placeholder {
+  color: #68d5c4;
 }
 
 .frbox .givemonney .chash .el-button {
@@ -83,8 +108,33 @@
   font-size: 20px;
 }
 
+.frbox .givemonney .moneykey .el-input .el-input-group__prepend {
+  border-color: white;
+  background-color: #68d5c4;
+  color: white;
+}
+
 .frbox .givemonney .moneykey .el-input input {
+  background: white;
+  border-color: white;
+  color: #68d5c4;
   height: 50px;
+}
+
+.frbox .givemonney .moneykey .el-input ::-webkit-input-placeholder {
+  color: #68d5c4;
+}
+
+.frbox .givemonney .moneykey .el-input :-ms-input-placeholder {
+  color: #68d5c4;
+}
+
+.frbox .givemonney .moneykey .el-input :-moz-placeholder {
+  color: #68d5c4;
+}
+
+.frbox .givemonney .moneykey .el-input ::-moz-placeholder {
+  color: #68d5c4;
 }
 
 .frbox .givemonney .moneykey .el-button {
