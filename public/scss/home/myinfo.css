@@ -39,12 +39,34 @@
 }
 
 .info .el-input .el-input-group__prepend {
+  border-color: #68d5c4;
+  background-color: #68d5c4;
+  color: white;
   font-size: 22px;
 }
 
 .info .el-input input {
+  background: white;
+  border-color: #68d5c4;
+  color: #68d5c4;
   font-size: 22px;
   height: 50px;
+}
+
+.info .el-input ::-webkit-input-placeholder {
+  color: #68d5c4;
+}
+
+.info .el-input :-ms-input-placeholder {
+  color: #68d5c4;
+}
+
+.info .el-input :-moz-placeholder {
+  color: #68d5c4;
+}
+
+.info .el-input ::-moz-placeholder {
+  color: #68d5c4;
 }
 
 .info .el-button {

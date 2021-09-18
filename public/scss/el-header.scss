@@ -5,6 +5,9 @@ $litlle-bule:rgb(0, 207, 232);
 
 .el-header 
 {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
     background-color:$gree-color;
     color: $white-color;
     .userid{

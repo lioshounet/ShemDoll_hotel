@@ -55,10 +55,30 @@ $inputh:50px;
                 width: $inputw;
                 height: $inputh;
                 font-size: 20px;
+                .el-input-group__prepend{
+                    border-color:$white-color;
+                    background-color: $gree-color;
+                    color:$white-color;
+                }
                 input{
-                    height: $inputh;
+                    background:$white-color;
+                    border-color: $white-color;
+                    color: $gree-color;
+                    height: $inputh;    
                 }
               
+            }
+            ::-webkit-input-placeholder{
+                color:$gree-color;
+            }
+            :-ms-input-placeholder{
+                color:$gree-color;
+            }
+            :-moz-placeholder{
+                color:$gree-color;
+            }
+            ::-moz-placeholder{
+                color:$gree-color;
             }
             .el-button{
                 height: $inputh;
@@ -83,8 +103,29 @@ $inputh:50px;
                 width: $inputw;
                 height: $inputh;
                 font-size: 20px;
+                .el-input-group__prepend{
+                    border-color:$white-color;
+                    background-color: $gree-color;
+                    color:$white-color;
+                }
                 input{
-                    height: $inputh;
+                    background:$white-color;
+                    border-color: $white-color;
+                    color: $gree-color;
+                    height: $inputh;    
+                }
+                // placeholder颜色修改
+                ::-webkit-input-placeholder{
+                    color:$gree-color;
+                }
+                :-ms-input-placeholder{
+                    color:$gree-color;
+                }
+                :-moz-placeholder{
+                    color:$gree-color;
+                }
+                ::-moz-placeholder{
+                    color:$gree-color;
                 }
             }
             .el-button{
