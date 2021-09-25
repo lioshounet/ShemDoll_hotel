@@ -31,7 +31,7 @@
                 >
                 </el-date-picker>
               </div>
-              <el-button @click="logg()">添加</el-button>
+              <el-button type="text" @click="upbook()">提交</el-button>
             </el-form>
           </el-dialog>
         </div>
@@ -87,6 +87,28 @@ export default {
       this.daynub =
         Number((this.value1[1] - this.value1[0]) / 1000 / 3600 / 24) + 1;
       // alert(this.daynub);
+    },
+    upbook() {
+      //防止重复请求的校验   还没做
+      this.$confirm("是否提交？", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning",
+      })
+        .then(() => {
+          console.log("成功");
+          this.$message({
+            type: "success",
+            message: "提交成功!",
+          });
+        })
+        .catch(() => {
+          console.log("取消");
+          this.$message({
+            type: "info",
+            message: "取消提交",
+          });
+        });
     },
   },
 };
