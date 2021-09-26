@@ -37,14 +37,14 @@ $imgsize:200px;
                 }
                 display: inline-block;
                 width: 40%;
-                height: $imgsize*1.5;
+                height: $imgsize * 1.5;
                 margin-left: 5%;
                 margin-bottom: 20px;
                 text-align: left;
                 .textbox{
                     padding-top:2%;
                     float: left;
-                    width: $imgsize*1.5;
+                    width: $imgsize * 1.5;
                     margin-left:50px;
                     .text{
                         font-size: 15px;
@@ -56,8 +56,6 @@ $imgsize:200px;
 }
 
 
-
-
 .boxs{
     text-align: left;
  
@@ -67,6 +65,7 @@ $imgsize:200px;
         }
         display: inline-block;
         width: 480px;
+        // width: 48%;
         height: $imgsize*1.5;
         margin: 10px;
         text-align: left;
@@ -81,5 +80,55 @@ $imgsize:200px;
             // margin-bottom: 0px;
         }
        
+    }
+}
+
+.overboxs{
+    text-align: left;
+ 
+    .box-card {
+        img{
+            float: left;
+        }
+        display: inline-block;
+        // width: 480px;
+        width: 48%;
+        height: $imgsize*1.5;
+        margin: 10px;
+        text-align: left;
+        .textbox{
+            padding-top:40px;
+            float: left;
+            margin-left:50px;
+            height: $imgsize - 40;
+            .text{
+                font-size: 15px;
+            }
+            // margin-bottom: 0px;
+        }
+       
+    }
+
+    .givepoint{
+        float: left;
+        // top: 0%;
+        // left: 0%;
+        width: 33%;
+        height: 15%;
+        // background-color: rgb(255, 0, 0);
+        margin-top: 9%;
+        margin-left: 10%;
+        .demonstration{
+            display: inline-block;
+            font-size: 25px;
+            margin-left: 25%;
+            margin-bottom: 10%;
+        }
+        span{
+            margin-left: 5%;
+        }
+        i:before{
+            font-size: 25px;
+        }
     }
 }

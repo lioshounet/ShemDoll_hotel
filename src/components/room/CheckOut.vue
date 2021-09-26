@@ -7,7 +7,7 @@
             <div slot="header" class="clearfix">
               <span>{{ card.hotlename }}</span>
               <el-button style="float: right; padding: 3px 0" type="text"
-                >查看详情
+                >更改
               </el-button>
             </div>
             <img v-bind:src="card.link" alt="" width="200PX" />
@@ -31,7 +31,7 @@
             <div slot="header" class="clearfix">
               <span>{{ card.hotlename }}</span>
               <el-button style="float: right; padding: 3px 0" type="text"
-                >查看详情
+                >退房
               </el-button>
             </div>
             <img v-bind:src="card.link" alt="" width="200PX" />
@@ -123,13 +123,13 @@
         </el-collapse></el-tab-pane
       >
       <el-tab-pane label="结束订单" name="fourth">
-        <div class="boxs">
+        <div class="overboxs">
           <el-card class="box-card" v-for="card in overlist">
             <div slot="header" class="clearfix">
               <span>{{ card.hotlename }}</span>
-              <el-button style="float: right; padding: 3px 0" type="text"
-                >查看详情
-              </el-button>
+              <!-- <el-button style="float: right; padding: 3px 0" type="text"
+                >评分
+              </el-button> -->
             </div>
             <img v-bind:src="card.link" alt="" width="200PX" />
             <!-- <img src="/img/userinfo/indoors-4234071_1920.png" alt="" /> -->
@@ -143,9 +143,13 @@
                 {{ cardmarklist[i] + ":" + item }}
               </div>
             </div>
+            <div class="givepoint">
+              <span class="demonstration">给我打分</span>
+              <el-rate v-model="value2" :colors="colors"> </el-rate>
+            </div>
           </el-card>
-        </div></el-tab-pane
-      >
+        </div>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -154,7 +158,7 @@
 </style>
 <script>
 export default {
-  name: "ShemHotelWallet",
+  // name: "ShemHotelWallet",
   components: {},
   data() {
     var _this = this;
@@ -188,6 +192,13 @@ export default {
       activeName: "second",
       cardmarklist: ["酒店名称", "房号", "价格", "地址"],
       acardmarklist: ["酒店名称", "订单号", "价格", "申诉具体原因"],
+      //-----------------------------------------------------------------------
+      //这里的value1没有写完，应该加入list，每个卡片的值保持独立
+      value1: null,
+      value2: null,
+      colors: ["#99A9BF", "rgb(0, 207, 232)", "rgb(104, 213, 196)"],
+      //这里是不同等级的颜色
+      // 等同于 { 2: '#99A9BF', 4: { value: '#F7BA2A', excluded: true }, 5: '#FF9900' }
     };
   },
   methods: {

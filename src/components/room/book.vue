@@ -60,7 +60,7 @@
 <script>
 var daynub = 0;
 export default {
-  name: "ShemHotelMyinfo",
+  // name: "ShemHotelMyinfo",
   data() {
     var _this = this;
     this.$http.get("json/room/stor.json").then(function (res) {
