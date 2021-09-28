@@ -186,10 +186,6 @@ export default {
     axios({
       method: "GET",
       url: "http://localhost:3000/bookroom",
-      data: {
-        title: "卷王肖江早上八点起来赶ppt",
-        author: "卷王肖江",
-      },
     }).then((response) => {
       _this.booklist = response.data;
       // console.log("233");

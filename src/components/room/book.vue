@@ -22,7 +22,7 @@
                 <span class="demonstration">选择时间</span>
                 <br />
                 <el-date-picker
-                  v-model="value1"
+                  v-model="thetime"
                   type="daterange"
                   range-separator="至"
                   start-placeholder="开始日期"
@@ -96,7 +96,7 @@ export default {
       dialogTableVisible: false,
       dialogFormVisible: false,
       formLabelWidth: "120px",
-      value1: "",
+      thetime: "",
       daynub: 0,
       values: 0,
     };
@@ -112,9 +112,6 @@ export default {
       // alert(this.daynub);
       console.log(this.value1[1]);
       console.log(this.value1[0]);
-    },
-    shiyan(e, nmb) {
-      console.log(this.$refs.dataNum.dataset.num);
     },
     upbook(idnmb) {
       console.log(idnmb);
@@ -136,8 +133,8 @@ export default {
               price: this.roomlist[idnmb].price,
               where: this.roomlist[idnmb].where,
               link: this.roomlist[idnmb].link,
-              start: "",
-              end: "",
+              start: this.thetime[0],
+              end: this.thetime[1],
             },
           }).then((response) => {
             console.log(response.data);
@@ -148,7 +145,7 @@ export default {
           });
         })
         .catch(() => {
-          console.log("取消");
+          console.log("提交取消");
           this.$message({
             type: "info",
             message: "取消提交",

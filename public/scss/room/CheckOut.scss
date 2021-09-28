@@ -149,18 +149,21 @@ $imgsize:200px;
             float: left;
             margin-left:50px;
             height: $imgsize - 40;
-            width: 60%;
+            width: 66%;
             .bookroominfo{
+                float: left;
+                // display: inline-block;
+                margin-right: 10%;
                 div{
                     display: block;
                     margin-bottom: 17px;
                 }
-                float: left;
-                margin-right: 10%;
             }
             .booktime{
                 // display: inline-block;
-                float: left;
+                // float: left;
+                width: 100%;
+                // margin-right: 10%;
                 div{
                     display: block;
                     margin-bottom: 17px;

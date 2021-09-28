@@ -140,7 +140,7 @@
   float: left;
   margin-left: 50px;
   height: 160px;
-  width: 60%;
+  width: 66%;
 }
 
 .albookboxs .box-card .textbox .bookroominfo {
@@ -154,7 +154,7 @@
 }
 
 .albookboxs .box-card .textbox .booktime {
-  float: left;
+  width: 100%;
 }
 
 .albookboxs .box-card .textbox .booktime div {
