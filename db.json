@@ -1,0 +1,84 @@
+{
+  "userinfo": [
+    {
+      "age": "18",
+      "bgimg": "/img/userinfo/indoors-4234071_1920.png",
+      "headimg": "/img/userinfo/QQ图片20210912172644.jpg",
+      "monney": "444444444444444",
+      "userID": "001",
+      "name": "卷王肖江",
+      "email": "1090057105@qq.com",
+      "tel": "810820882",
+      "id": 1
+    }
+  ],
+  "storroom": [
+    {
+      "id": 1,
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png"
+    },
+    {
+      "id": 2,
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png"
+    },
+    {
+      "id": 3,
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png"
+    },
+    {
+      "id": 4,
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png"
+    }
+  ],
+  "bookroom": [
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "start": "2021-09-07T16:00:00.000Z",
+      "end": "2021-09-14T16:00:00.000Z",
+      "id": 1
+    },
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "start": "2021-09-08T16:00:00.000Z",
+      "end": "2021-09-15T16:00:00.000Z",
+      "id": 2
+    },
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "start": "2021-09-07T16:00:00.000Z",
+      "end": "2021-09-21T16:00:00.000Z",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

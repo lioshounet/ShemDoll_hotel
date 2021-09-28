@@ -72,3 +72,96 @@
 .boxs .box-card .textbox .text {
   font-size: 15px;
 }
+
+.overboxs {
+  text-align: left;
+}
+
+.overboxs .box-card {
+  display: inline-block;
+  width: 48%;
+  height: 300px;
+  margin: 10px;
+  text-align: left;
+}
+
+.overboxs .box-card img {
+  float: left;
+}
+
+.overboxs .box-card .textbox {
+  padding-top: 40px;
+  float: left;
+  margin-left: 50px;
+  height: 160px;
+}
+
+.overboxs .box-card .textbox .text {
+  font-size: 15px;
+}
+
+.overboxs .givepoint {
+  float: left;
+  width: 33%;
+  height: 15%;
+  margin-top: 9%;
+  margin-left: 10%;
+}
+
+.overboxs .givepoint .demonstration {
+  display: inline-block;
+  font-size: 25px;
+  margin-left: 25%;
+  margin-bottom: 10%;
+}
+
+.overboxs .givepoint span {
+  margin-left: 5%;
+}
+
+.overboxs .givepoint i:before {
+  font-size: 25px;
+}
+
+.albookboxs .box-card {
+  display: inline-block;
+  width: 48%;
+  height: 300px;
+  margin: 10px;
+  text-align: left;
+}
+
+.albookboxs .box-card img {
+  float: left;
+}
+
+.albookboxs .box-card .textbox {
+  padding-top: 40px;
+  float: left;
+  margin-left: 50px;
+  height: 160px;
+  width: 66%;
+}
+
+.albookboxs .box-card .textbox .bookroominfo {
+  float: left;
+  margin-right: 10%;
+}
+
+.albookboxs .box-card .textbox .bookroominfo div {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.albookboxs .box-card .textbox .booktime {
+  width: 100%;
+}
+
+.albookboxs .box-card .textbox .booktime div {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.albookboxs .box-card .textbox .text {
+  font-size: 15px;
+}

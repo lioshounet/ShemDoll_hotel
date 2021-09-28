@@ -25,7 +25,7 @@
         <template slot="prepend">邮箱</template>
       </el-input>
       <el-row>
-        <el-button>提交</el-button>
+        <el-button @click="updata()">提交</el-button>
       </el-row>
     </div>
     <!-- <div class="bu_div">提交按钮</div> -->
@@ -35,12 +35,21 @@
 @import url("./../../../public/scss/home/myinfo.css");
 </style>
 <script>
+const axios = require("axios");
 export default {
   name: "ShemHotelMyinfo",
   data() {
     var _this = this;
-    this.$http.get("json/home/userinfo.json").then(function (res) {
-      _this.userinfo = res.data;
+    // this.$http.get("json/home/userinfo.json").then(function (res) {
+    //   _this.userinfo = res.data;
+    // });
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/userinfo",
+    }).then((response) => {
+      _this.userinfo = response.data;
+      // console.log("233");
+      // console.log(response.data.storroom);
     });
     return {
       userinfo: [],
@@ -52,6 +61,53 @@ export default {
 
   mounted() {},
 
-  methods: {},
+  methods: {
+    // ppp() {
+    //   console.log(this.userinfo[0].name);
+    // },
+    updata() {
+      //--------------
+      console.log();
+      //防止重复请求的校验   还没做
+      this.$confirm("是否提交？", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning",
+      })
+        .then(() => {
+          // console.log("成功");
+          //增加json内容----加的功能
+          axios({
+            method: "PUT",
+            url: "http://localhost:3000/userinfo/1",
+            data: {
+              age: this.userinfo[0].age,
+              bgimg: this.userinfo[0].bgimg,
+              headimg: this.userinfo[0].headimg,
+              monney: this.userinfo[0].monney,
+              userID: this.userinfo[0].userID,
+              //--------------------------------
+              name: this.userinfo[0].name,
+              email: this.userinfo[0].email,
+              tel: this.userinfo[0].tel,
+            },
+          }).then((response) => {
+            console.log(response.data);
+          });
+          this.$message({
+            type: "success",
+            message: "提交成功!",
+          });
+        })
+        .catch(() => {
+          console.log("提交取消");
+          this.$message({
+            type: "info",
+            message: "取消提交",
+          });
+        });
+      //-----------
+    },
+  },
 };
 </script>

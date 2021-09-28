@@ -29,6 +29,18 @@ $imgsize:400px;
  
     .box-card {
         .el-dialog{
+            .el-dialog__header{
+                background-color:$gree-color;
+                button{
+                    i:before{
+                        color: $white-color;
+                    }
+                }
+                span{
+                    color: $white-color;
+                }
+               
+            }
             .el-dialog__body{
                 height: 400px;
             }
@@ -69,8 +81,10 @@ $imgsize:400px;
                     margin-bottom: 30px;
                 }
             }
+            
             .el-button{
                 float: left;
+                width: 75px;
                 margin-top: $imgsize / 8;
                 margin-left: $imgsize / 1.75;
                 background-color: $gree-color;
@@ -81,14 +95,8 @@ $imgsize:400px;
                     background-color:$white-color;
                     border-color: $gree-color;
                 }
-                &:focus{
-                    width: 400px;
-                    background-color: $gree-color;
-                    color:$white-color;
-                    border:2px solid $gree-color;
-                    font-size: 22px;
-                }
             }
+
         }
         .showpic{
             float: left;
