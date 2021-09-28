@@ -1,11 +1,11 @@
 # shem_hotel
 
-## Project setup
+## Project setup（第一次下载的依赖安装）
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development（每次启动的运行）
 ```
 npm run serve
 ```
