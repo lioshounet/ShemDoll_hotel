@@ -132,3 +132,45 @@ $imgsize:200px;
         }
     }
 }
+
+.albookboxs{
+    .box-card {
+        img{
+            float: left;
+        }
+        display: inline-block;
+        // width: 480px;
+        width: 48%;
+        height: $imgsize*1.5;
+        margin: 10px;
+        text-align: left;
+        .textbox{
+            padding-top:40px;
+            float: left;
+            margin-left:50px;
+            height: $imgsize - 40;
+            width: 60%;
+            .bookroominfo{
+                div{
+                    display: block;
+                    margin-bottom: 17px;
+                }
+                float: left;
+                margin-right: 10%;
+            }
+            .booktime{
+                // display: inline-block;
+                float: left;
+                div{
+                    display: block;
+                    margin-bottom: 17px;
+                }
+            }
+            .text{
+                font-size: 15px;
+            }
+            // margin-bottom: 0px;
+        }
+       
+    }
+}

@@ -122,3 +122,46 @@
 .overboxs .givepoint i:before {
   font-size: 25px;
 }
+
+.albookboxs .box-card {
+  display: inline-block;
+  width: 48%;
+  height: 300px;
+  margin: 10px;
+  text-align: left;
+}
+
+.albookboxs .box-card img {
+  float: left;
+}
+
+.albookboxs .box-card .textbox {
+  padding-top: 40px;
+  float: left;
+  margin-left: 50px;
+  height: 160px;
+  width: 60%;
+}
+
+.albookboxs .box-card .textbox .bookroominfo {
+  float: left;
+  margin-right: 10%;
+}
+
+.albookboxs .box-card .textbox .bookroominfo div {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.albookboxs .box-card .textbox .booktime {
+  float: left;
+}
+
+.albookboxs .box-card .textbox .booktime div {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.albookboxs .box-card .textbox .text {
+  font-size: 15px;
+}

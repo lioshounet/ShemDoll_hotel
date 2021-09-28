@@ -1,0 +1,101 @@
+{
+  "storroom": [
+    {
+      "id": 1,
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png"
+    },
+    {
+      "id": 2,
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png"
+    },
+    {
+      "id": 3,
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png"
+    },
+    {
+      "id": 4,
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png"
+    }
+  ],
+  "bookroom": [
+    {
+      "id": 1,
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "start": "",
+      "end": ""
+    },
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "start": "",
+      "end": "",
+      "id": 2
+    },
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "start": "",
+      "end": "",
+      "id": 3
+    },
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "start": "",
+      "end": "",
+      "id": 4
+    },
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "start": "",
+      "end": "",
+      "id": 5
+    },
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "start": "",
+      "end": "",
+      "id": 6
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

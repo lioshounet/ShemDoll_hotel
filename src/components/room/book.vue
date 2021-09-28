@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="boxs">
-      <el-card class="box-card" v-for="card in roomlist">
+      <el-card class="box-card" v-for="(card, index) in roomlist">
         <div slot="header" class="clearfix">
           <span>{{ card.hotlename }}</span>
           <el-button
@@ -31,7 +31,12 @@
                 >
                 </el-date-picker>
               </div>
-              <el-button type="text" @click="upbook()">提交</el-button>
+              <div
+                :class="{ upbook: index === clickIndex }"
+                @click="upbook(index)"
+              >
+                <el-button type="text">提交</el-button>
+              </div>
             </el-form>
           </el-dialog>
         </div>
@@ -41,7 +46,7 @@
           <div
             v-for="(item, o, i) in card"
             :key="o"
-            v-if="i != 4"
+            v-if="i != 5 && i != 0"
             class="text item"
           >
             {{ cardmarklist[i] + ":" + item }}
@@ -58,17 +63,34 @@
 @import url("./../../../public/scss/room/book.css");
 </style>
 <script>
+const axios = require("axios");
 var daynub = 0;
 export default {
   // name: "ShemHotelMyinfo",
   data() {
     var _this = this;
-    this.$http.get("json/room/stor.json").then(function (res) {
-      _this.roomlist = res.data;
+    // this.$http.get("json/room/stor.json").then(function (res) {
+    //   _this.roomlist = res.data;
+    // });
+
+    //-----------------------自动触发get请求------------------------------------
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/storroom",
+      // data: {
+      //   title: "卷王肖江早上八点起来赶ppt",
+      //   author: "卷王肖江",
+      // },
+    }).then((response) => {
+      _this.roomlist = response.data;
+      console.log(_this.roomlist[0]);
+      // console.log("233");
+      // console.log(response.data.storroom);
     });
+
     return {
       roomlist: [],
-      cardmarklist: ["酒店名称", "房号", "价格", "地址"],
+      cardmarklist: ["房间卡片信息", "酒店名称", "房号", "价格", "地址"],
 
       //-----------------------------------------
       dialogTableVisible: false,
@@ -76,6 +98,7 @@ export default {
       formLabelWidth: "120px",
       value1: "",
       daynub: 0,
+      values: 0,
     };
   },
 
@@ -87,8 +110,14 @@ export default {
       this.daynub =
         Number((this.value1[1] - this.value1[0]) / 1000 / 3600 / 24) + 1;
       // alert(this.daynub);
+      console.log(this.value1[1]);
+      console.log(this.value1[0]);
     },
-    upbook() {
+    shiyan(e, nmb) {
+      console.log(this.$refs.dataNum.dataset.num);
+    },
+    upbook(idnmb) {
+      console.log(idnmb);
       //防止重复请求的校验   还没做
       this.$confirm("是否提交？", "提示", {
         confirmButtonText: "确定",
@@ -96,7 +125,23 @@ export default {
         type: "warning",
       })
         .then(() => {
-          console.log("成功");
+          // console.log("成功");
+          //增加json内容----加的功能
+          axios({
+            method: "POST",
+            url: "http://localhost:3000/bookroom",
+            data: {
+              hotlename: this.roomlist[idnmb].hotlename,
+              roomnmb: this.roomlist[idnmb].roomnmb,
+              price: this.roomlist[idnmb].price,
+              where: this.roomlist[idnmb].where,
+              link: this.roomlist[idnmb].link,
+              start: "",
+              end: "",
+            },
+          }).then((response) => {
+            console.log(response.data);
+          });
           this.$message({
             type: "success",
             message: "提交成功!",

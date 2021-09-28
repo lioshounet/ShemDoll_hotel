@@ -2,7 +2,7 @@
   <div>
     <el-tabs v-model="activeName" @tab-click="handleClick" class="ch-el-tabs">
       <el-tab-pane label="已经预订" name="first">
-        <div class="boxs">
+        <div class="albookboxs">
           <el-card class="box-card" v-for="card in booklist">
             <div slot="header" class="clearfix">
               <span>{{ card.hotlename }}</span>
@@ -13,13 +13,25 @@
             <img v-bind:src="card.link" alt="" width="200PX" />
             <!-- <img src="/img/userinfo/indoors-4234071_1920.png" alt="" /> -->
             <div class="textbox">
-              <div
-                v-for="(item, o, i) in card"
-                :key="o"
-                v-if="i != 4"
-                class="text item"
-              >
-                {{ cardmarklist[i] + ":" + item }}
+              <div class="bookroominfo">
+                <!-- <div
+                  v-for="(item, o, i) in card"
+                  :key="o"
+                  v-if="i < 5 && i != 0"
+                  class="text item"
+                >
+                  {{ alroommarklist[i] + ":" + item }}
+                </div> -->
+                <div>{{ "酒店名称" + card.hotlename }}</div>
+                <div>{{ "酒店编号" + card.roomnmb }}</div>
+                <div>{{ "酒店价格" + card.price }}</div>
+                <div>{{ "酒店地址" + card.where }}</div>
+              </div>
+
+              <div class="booktime">
+                <div>{{ "开始时间" + ":" + card.start }}</div>
+                <div>{{ "结束时间" + ":" + card.end }}</div>
+                <!-- <br /> -->
               </div>
             </div>
           </el-card>
@@ -157,6 +169,7 @@
 @import url("./../../../public/scss/room/CheckOut.css");
 </style>
 <script>
+const axios = require("axios");
 export default {
   // name: "ShemHotelWallet",
   components: {},
@@ -165,9 +178,24 @@ export default {
     this.$http.get("json/home/userinfo.json").then(function (res) {
       _this.userinfo = res.data;
     });
-    this.$http.get("json/room/myroom/AlBook.json").then(function (res) {
-      _this.booklist = res.data;
+    // this.$http.get("json/room/myroom/AlBook.json").then(function (res) {
+    //   _this.booklist = res.data;
+    // });
+
+    //-----------------------自动触发get请求------------------------------------
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/bookroom",
+      data: {
+        title: "卷王肖江早上八点起来赶ppt",
+        author: "卷王肖江",
+      },
+    }).then((response) => {
+      _this.booklist = response.data;
+      // console.log("233");
+      // console.log(response.data.storroom);
     });
+
     this.$http.get("json/room/myroom/uselist.json").then(function (res) {
       _this.uselist = res.data;
     });
@@ -190,6 +218,7 @@ export default {
       uselist: [],
       appeallist: [],
       activeName: "second",
+      alroommarklist: ["已定房间信息", "酒店名称", "房号", "价格", "地址"],
       cardmarklist: ["酒店名称", "房号", "价格", "地址"],
       acardmarklist: ["酒店名称", "订单号", "价格", "申诉具体原因"],
       //-----------------------------------------------------------------------
