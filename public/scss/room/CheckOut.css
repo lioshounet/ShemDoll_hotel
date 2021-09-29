@@ -124,7 +124,7 @@
 }
 
 .albookboxs .box-card {
-  display: inline-block;
+  float: left;
   width: 48%;
   height: 300px;
   margin: 10px;

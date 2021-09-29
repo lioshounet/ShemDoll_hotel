@@ -6,7 +6,7 @@
       "headimg": "/img/userinfo/QQ图片20210912172644.jpg",
       "monney": "444444444444444",
       "userID": "001",
-      "name": "卷王肖江",
+      "name": "害怕讲ppt的肖江",
       "email": "1090057105@qq.com",
       "tel": "810820882",
       "id": 1
@@ -76,6 +76,74 @@
       "start": "2021-09-07T16:00:00.000Z",
       "end": "2021-09-21T16:00:00.000Z",
       "id": 3
+    },
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "roomnmb": "404",
+      "price": "44",
+      "where": "希尔雅区689号",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "start": "2021-09-07T16:00:00.000Z",
+      "end": "2021-09-14T16:00:00.000Z",
+      "id": 4
+    }
+  ],
+  "costdata": [
+    {
+      "id": 1,
+      "date": "2016-05-02",
+      "RevenueExpenditure": "支出",
+      "howmach": "44",
+      "where": "情侣客房19586",
+      "nmb": "F458963215655658"
+    },
+    {
+      "date": "2021-8-29 14:58:46",
+      "RevenueExpenditure": "收入",
+      "howmach": "",
+      "where": "直接充值",
+      "nmb": "F458963215655658",
+      "id": 2
+    },
+    {
+      "date": "2021-8-29 14:59:24",
+      "RevenueExpenditure": "收入",
+      "howmach": "efeg",
+      "where": "直接充值",
+      "nmb": "F458963215655658",
+      "id": 3
+    },
+    {
+      "date": "2021-8-29 15:0:4",
+      "RevenueExpenditure": "收入",
+      "howmach": "efef",
+      "where": "直接充值",
+      "nmb": "F458963215655658",
+      "id": 4
+    },
+    {
+      "date": "2021-8-29 15:7:17",
+      "RevenueExpenditure": "收入",
+      "howmach": 0.31144288718031987,
+      "where": "KEY",
+      "nmb": "F458963215655658",
+      "id": 5
+    },
+    {
+      "date": "2021-8-29 15:8:0",
+      "RevenueExpenditure": "收入",
+      "howmach": 0.22569054890546458,
+      "where": "KEY",
+      "nmb": "F458963215655658",
+      "id": 6
+    },
+    {
+      "date": "2021-8-29 15:8:19",
+      "RevenueExpenditure": "收入",
+      "howmach": 0.8389548386401375,
+      "where": "KEY",
+      "nmb": "SRrg",
+      "id": 7
     }
   ],
   "profile": {

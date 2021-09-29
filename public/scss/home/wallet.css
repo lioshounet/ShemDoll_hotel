@@ -46,6 +46,20 @@
   margin-bottom: 20px;
 }
 
+.frbox .givemonney .chash .el-dialog {
+  width: 500px;
+}
+
+.frbox .givemonney .chash .el-dialog p {
+  font-size: 50px;
+  margin-left: 10%;
+}
+
+.frbox .givemonney .chash .el-dialog .el-image {
+  margin-left: 16%;
+  width: 300px;
+}
+
 .frbox .givemonney .chash .el-input {
   position: relative;
   width: 370px;
@@ -155,5 +169,5 @@
 .costlist {
   width: 100%;
   height: 500px;
-  background-color: #3d920b;
+  background-color: white;
 }

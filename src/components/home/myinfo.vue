@@ -48,7 +48,6 @@ export default {
       url: "http://localhost:3000/userinfo",
     }).then((response) => {
       _this.userinfo = response.data;
-      // console.log("233");
       // console.log(response.data.storroom);
     });
     return {

@@ -15,16 +15,23 @@
       </div>
       <div class="givemonney">
         <div class="chash">
-          <el-input placeholder="请输入金额" v-model="input1">
+          <el-input placeholder="请输入金额" v-model="RealMoney">
             <template slot="prepend">金额</template>
           </el-input>
-          <el-button>充值</el-button>
+          <el-button @click="AddMoney()">充值</el-button>
+          <el-dialog title="充值付款" :visible.sync="CostCodeDialog">
+            <!-- 弹出内容 -->
+            <div>
+              <p>请扫码进行支付</p>
+              <el-image v-bind:src="'./../img/1632891657768.jpg'"></el-image>
+            </div>
+          </el-dialog>
         </div>
         <div class="moneykey">
-          <el-input placeholder="请输入激活码" v-model="input2">
+          <el-input placeholder="请输入激活码" v-model="keynmb">
             <template slot="prepend">激活码</template>
           </el-input>
-          <el-button>激活码充值</el-button>
+          <el-button @click="KeyPut()">激活码充值</el-button>
         </div>
 
         <!-- <el-button>充值码充值</el-button> -->
@@ -47,8 +54,9 @@
 @import url("./../../../public/scss/home/wallet.css");
 </style>
 <script>
+const axios = require("axios");
 export default {
-  name: "ShemHotelWallet",
+  // name: "ShemHotelWallet",
   components: {},
 
   data() {
@@ -56,16 +64,90 @@ export default {
     this.$http.get("json/home/userinfo.json").then(function (res) {
       _this.userinfo = res.data;
     });
-    this.$http.get("json/home/costlist.json").then(function (ress) {
-      _this.costData = ress.data;
+
+    // this.$http.get("json/home/costlist.json").then(function (ress) {
+    //   _this.costData = ress.data;
+    // });
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/userinfo",
+    }).then((response) => {
+      _this.userinfo = response.data;
+      // console.log(response.data.storroom);
+    });
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/costdata",
+    }).then((response) => {
+      _this.costData = response.data;
+      // console.log(response.data.storroom);
     });
     return {
       //用户基本信息返回
       userinfo: [],
       costData: [],
-      input1: "",
-      input2: "",
+      CostCodeDialog: false,
+      RealMoney: "",
+      keynmb: "",
     };
+  },
+  methods: {
+    AddMoney() {
+      var paytime = new Date();
+      this.CostCodeDialog = true;
+      axios({
+        method: "POST",
+        url: "http://localhost:3000/costdata",
+        data: {
+          date:
+            String(paytime.getFullYear()) +
+            "-" +
+            String(paytime.getMonth()) +
+            "-" +
+            String(paytime.getDate()) +
+            " " +
+            String(paytime.getHours()) +
+            ":" +
+            String(paytime.getMinutes()) +
+            ":" +
+            String(paytime.getSeconds()),
+          RevenueExpenditure: "收入",
+          howmach: this.RealMoney,
+          where: "直接充值",
+          nmb: "F458963215655658",
+        },
+      }).then((response) => {
+        _this.costData = response.data;
+      });
+    },
+    KeyPut() {
+      var keytime = new Date();
+      this.CostCodeDialog = true;
+      axios({
+        method: "POST",
+        url: "http://localhost:3000/costdata",
+        data: {
+          date:
+            String(keytime.getFullYear()) +
+            "-" +
+            String(keytime.getMonth()) +
+            "-" +
+            String(keytime.getDate()) +
+            " " +
+            String(keytime.getHours()) +
+            ":" +
+            String(keytime.getMinutes()) +
+            ":" +
+            String(keytime.getSeconds()),
+          RevenueExpenditure: "收入",
+          howmach: Math.random(),
+          where: "KEY",
+          nmb: this.keynmb,
+        },
+      }).then((response) => {
+        _this.costData = response.data;
+      });
+    },
   },
 };
 </script>
