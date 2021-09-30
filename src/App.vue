@@ -46,7 +46,7 @@
 
       <el-container>
         <el-header>
-          <p class="userid">ID:{{ userinfo[0].ID }}</p>
+          <p class="userid">ID:{{ userinfo[0].userID }}</p>
           <p class="username">{{ userinfo[0].name }}</p>
         </el-header>
 
@@ -99,13 +99,23 @@
 <script>
 import bodymain from "./bodymain";
 import Msg from "./msg.js";
+
+const axios = require("axios");
+
 export default {
   components: { bodymain },
   // name: "sheet",
   data() {
     var _this = this;
-    this.$http.get("json/home/userinfo.json").then(function (res) {
-      _this.userinfo = res.data;
+    // this.$http.get("json/home/userinfo.json").then(function (res) {
+    //   _this.userinfo = res.data;
+    // });
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/userinfo",
+    }).then((response) => {
+      _this.userinfo = response.data;
+      // console.log(response.data.storroom);
     });
     return {
       userinfo: [],

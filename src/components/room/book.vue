@@ -77,14 +77,9 @@ export default {
     axios({
       method: "GET",
       url: "http://localhost:3000/storroom",
-      // data: {
-      //   title: "卷王肖江早上八点起来赶ppt",
-      //   author: "卷王肖江",
-      // },
     }).then((response) => {
       _this.roomlist = response.data;
       console.log(_this.roomlist[0]);
-      // console.log("233");
       // console.log(response.data.storroom);
     });
 

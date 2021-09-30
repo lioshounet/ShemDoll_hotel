@@ -138,7 +138,8 @@ $imgsize:200px;
         img{
             float: left;
         }
-        display: inline-block;
+        // display: inline-block;
+        float: left;
         // width: 480px;
         width: 48%;
         height: $imgsize*1.5;

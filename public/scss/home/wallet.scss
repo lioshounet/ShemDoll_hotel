@@ -49,6 +49,19 @@ $inputh:50px;
         .chash{
             position: relative;
             margin-bottom: 20px;
+            .el-dialog{
+                width: 500px;
+                p{
+                    font-size: 50px;
+                    // line-height: 50px;
+                    // padding: 0;
+                    margin-left: 10%;
+                }
+                .el-image{
+                    margin-left: 16%;
+                    width: 300px;
+                }
+            }
             .el-input{
                 position: relative;
                 // height: 50px;
@@ -151,6 +164,6 @@ $inputh:50px;
     // background-color: $gree-color;
     width: 100%;
     height: 500px;
-    background-color: rgb(61, 146, 11);
+    background-color: rgb(255, 255, 255);
     // margin-top: 140px;
 }
