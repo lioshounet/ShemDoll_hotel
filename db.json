@@ -4,7 +4,7 @@
       "age": "18",
       "bgimg": "/img/userinfo/indoors-4234071_1920.png",
       "headimg": "/img/userinfo/QQ图片20210912172644.jpg",
-      "monney": "444444444444444",
+      "monney": "45451",
       "userID": "001",
       "name": "害怕讲ppt的肖江",
       "email": "1090057105@qq.com",
@@ -152,6 +152,38 @@
       "where": "直接充值",
       "nmb": "F458963215655658",
       "id": 8
+    },
+    {
+      "date": "2021-9-3 17:54:4",
+      "RevenueExpenditure": "收入",
+      "howmach": "555",
+      "where": "直接充值",
+      "nmb": "F458963215655658",
+      "id": 9
+    },
+    {
+      "date": "2021-9-3 18:11:55",
+      "RevenueExpenditure": "收入",
+      "howmach": 3,
+      "where": "KEY",
+      "nmb": "dsvsegergr",
+      "id": 10
+    },
+    {
+      "date": "2021-9-3 18:12:17",
+      "RevenueExpenditure": "收入",
+      "howmach": 2,
+      "where": "KEY",
+      "nmb": "sveefef",
+      "id": 11
+    },
+    {
+      "date": "2021-9-3 18:12:35",
+      "RevenueExpenditure": "收入",
+      "howmach": 3,
+      "where": "KEY",
+      "nmb": "Srgegegef",
+      "id": 12
     }
   ],
   "uselist": [
