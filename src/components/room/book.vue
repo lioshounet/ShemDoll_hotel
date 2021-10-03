@@ -93,7 +93,7 @@ export default {
       formLabelWidth: "120px",
       thetime: "",
       daynub: 0,
-      values: 0,
+      // values: 0,
     };
   },
 
@@ -103,10 +103,10 @@ export default {
     logg() {},
     hh() {
       this.daynub =
-        Number((this.value1[1] - this.value1[0]) / 1000 / 3600 / 24) + 1;
+        Number((this.thetime[1] - this.thetime[0]) / 1000 / 3600 / 24) + 1;
       // alert(this.daynub);
-      console.log(this.value1[1]);
-      console.log(this.value1[0]);
+      // console.log(this.value1[1]);
+      // console.log(this.value1[0]);
     },
     upbook(idnmb) {
       console.log(idnmb);
