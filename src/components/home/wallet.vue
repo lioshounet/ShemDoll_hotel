@@ -95,6 +95,8 @@ export default {
     AddMoney() {
       var paytime = new Date();
       this.CostCodeDialog = true;
+
+      //-------------充值记录------------------
       axios({
         method: "POST",
         url: "http://localhost:3000/costdata",
@@ -115,6 +117,27 @@ export default {
           howmach: this.RealMoney,
           where: "直接充值",
           nmb: "F458963215655658",
+        },
+      }).then((response) => {
+        _this.costData = response.data;
+      });
+
+      //-------------------加钱------------------
+      axios({
+        method: "PUT",
+        url: "http://localhost:3000/userinfo/1",
+        data: {
+          age: this.userinfo[0].age,
+          bgimg: this.userinfo[0].bgimg,
+          headimg: this.userinfo[0].headimg,
+          monney: String(
+            Number(this.userinfo[0].monney) + Number(this.RealMoney)
+          ),
+          userID: this.userinfo[0].userID,
+          name: this.userinfo[0].name,
+          email: this.userinfo[0].email,
+          tel: this.userinfo[0].tel,
+          // id: 1,
         },
       }).then((response) => {
         _this.costData = response.data;
@@ -140,9 +163,30 @@ export default {
             ":" +
             String(keytime.getSeconds()),
           RevenueExpenditure: "收入",
-          howmach: Math.random(),
+          howmach: Math.round(Math.random() * 10),
           where: "KEY",
           nmb: this.keynmb,
+        },
+      }).then((response) => {
+        _this.costData = response.data;
+      });
+
+      axios({
+        method: "PUT",
+        url: "http://localhost:3000/userinfo/1",
+        data: {
+          age: this.userinfo[0].age,
+          bgimg: this.userinfo[0].bgimg,
+          headimg: this.userinfo[0].headimg,
+          monney: String(
+            Number(this.userinfo[0].monney) +
+              Number(Math.round(Math.random() * 10))
+          ),
+          userID: this.userinfo[0].userID,
+          name: this.userinfo[0].name,
+          email: this.userinfo[0].email,
+          tel: this.userinfo[0].tel,
+          // id: 1,
         },
       }).then((response) => {
         _this.costData = response.data;
