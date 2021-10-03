@@ -165,3 +165,53 @@
 .albookboxs .box-card .textbox .text {
   font-size: 15px;
 }
+
+.useing .box-card {
+  float: left;
+  width: 48%;
+  height: 300px;
+  margin: 10px;
+  text-align: left;
+}
+
+.useing .box-card img {
+  float: left;
+}
+
+.useing .box-card .el-dialog .el-button {
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+.useing .box-card .ch-textbox {
+  padding-top: 3%;
+  float: left;
+  margin-left: 6%;
+  height: 160px;
+  width: 66%;
+}
+
+.useing .box-card .ch-textbox .one {
+  float: left;
+}
+
+.useing .box-card .ch-textbox .one div {
+  height: 40px;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+.useing .box-card .ch-textbox .two {
+  float: left;
+  margin-left: 5px;
+}
+
+.useing .box-card .ch-textbox .two div {
+  height: 40px;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+.useing .box-card .ch-textbox .text {
+  font-size: 15px;
+}
