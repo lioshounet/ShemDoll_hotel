@@ -38,24 +38,78 @@
         </div>
       </el-tab-pane>
       <el-tab-pane label="正在使用" name="second">
-        <div class="boxs">
+        <div class="useing">
           <el-card class="box-card" v-for="card in uselist">
             <div slot="header" class="clearfix">
               <span>{{ card.hotlename }}</span>
-              <el-button style="float: right; padding: 3px 0" type="text"
-                >退房
-              </el-button>
+              <div style="float: right">
+                <el-button
+                  style="padding: 3px 0; font-size: 18px"
+                  type="text"
+                  class="appeal"
+                  @click="AppealSteps = true"
+                  color="red"
+                >
+                  申诉
+                </el-button>
+                <el-dialog title="申诉提交" :visible.sync="AppealSteps">
+                  <!-- 弹出内容 -->
+                  <p>申请原因</p>
+                  <el-select v-model="reason" placeholder="请选择">
+                    <el-option
+                      v-for="item in reasonchoose"
+                      :key="item.value"
+                      :label="item.label"
+                      :value="item.value"
+                      width="500"
+                    >
+                    </el-option>
+                  </el-select>
+                  <p>具体理由</p>
+                  <el-input placeholder="请输入内容" v-model="whyapp" clearable>
+                  </el-input>
+                  <p>申诉房间号</p>
+                  <el-input
+                    placeholder="请输入内容"
+                    v-model="card.hotlename"
+                    :disabled="true"
+                    clearable
+                  >
+                  </el-input>
+                  <p>地址</p>
+                  <el-input
+                    placeholder="请输入内容"
+                    v-model="card.where"
+                    :disabled="true"
+                    clearable
+                  >
+                  </el-input>
+
+                  <el-button>提交</el-button>
+                </el-dialog>
+                <el-button
+                  style="padding: 3px 0; font-size: 18px; margin-left: 10px"
+                  type="text"
+                  >退房
+                </el-button>
+              </div>
             </div>
             <img v-bind:src="card.link" alt="" width="200PX" />
             <!-- <img src="/img/userinfo/indoors-4234071_1920.png" alt="" /> -->
-            <div class="textbox">
-              <div
-                v-for="(item, o, i) in card"
-                :key="o"
-                v-if="i != 4"
-                class="text item"
-              >
-                {{ cardmarklist[i] + ":" + item }}
+            <div class="ch-textbox">
+              <div class="one">
+                <div v-for="m in cardmarklist">
+                  {{ m + ":" }}
+                </div>
+              </div>
+              <div class="two">
+                <div
+                  v-for="(item, o, i) in card"
+                  :key="o"
+                  v-if="i != 5 && i != 0"
+                >
+                  {{ item }}
+                </div>
               </div>
             </div>
           </el-card>
@@ -188,13 +242,22 @@ export default {
       url: "http://localhost:3000/bookroom",
     }).then((response) => {
       _this.booklist = response.data;
-      // console.log("233");
       // console.log(response.data.storroom);
     });
 
-    this.$http.get("json/room/myroom/uselist.json").then(function (res) {
-      _this.uselist = res.data;
+    // this.$http.get("json/room/myroom/uselist.json").then(function (res) {
+    //   _this.uselist = res.data;
+    // });
+
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/uselist",
+    }).then((response) => {
+      console.log("233");
+      _this.uselist = response.data;
+      // console.log(response.data.storroom);
     });
+
     this.$http.get("json/room/myroom/appeal/bookc.json").then(function (res) {
       _this.bookclist = res.data;
     });
@@ -221,9 +284,28 @@ export default {
       //这里的value1没有写完，应该加入list，每个卡片的值保持独立
       value1: null,
       value2: null,
+      Stepsactive: 0,
+      AppealSteps: false,
+      whyapp: "",
       colors: ["#99A9BF", "rgb(0, 207, 232)", "rgb(104, 213, 196)"],
       //这里是不同等级的颜色
       // 等同于 { 2: '#99A9BF', 4: { value: '#F7BA2A', excluded: true }, 5: '#FF9900' }
+      //-----------------------------下拉框的数据-------------------------------------------
+      reasonchoose: [
+        {
+          value: "选项1",
+          label: "预订取消",
+        },
+        {
+          value: "选项2",
+          label: "使用纠纷",
+        },
+        {
+          value: "选项3",
+          label: "其他原因",
+        },
+      ],
+      reason: "",
     };
   },
   methods: {
