@@ -80,6 +80,15 @@
   height: 50px;
 }
 
+.frbox .givemonney .chash .el-input input::-webkit-outer-spin-button,
+.frbox .givemonney .chash .el-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.frbox .givemonney .chash .el-input input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .frbox .givemonney .chash ::-webkit-input-placeholder {
   color: #68d5c4;
 }

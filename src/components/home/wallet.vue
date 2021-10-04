@@ -15,7 +15,12 @@
       </div>
       <div class="givemonney">
         <div class="chash">
-          <el-input placeholder="请输入金额" v-model="RealMoney">
+          <el-input
+            placeholder="请输入金额"
+            v-model="RealMoney"
+            onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+            type="number"
+          >
             <template slot="prepend">金额</template>
           </el-input>
           <el-button @click="AddMoney()">充值</el-button>
