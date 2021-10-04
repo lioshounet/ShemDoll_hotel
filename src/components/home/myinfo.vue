@@ -17,11 +17,20 @@
         <template slot="prepend">昵称</template>
       </el-input>
       <br />
-      <el-input placeholder="请输入内容" v-model="userinfo[0].tel">
+      <el-input
+        placeholder="请输入内容"
+        v-model="userinfo[0].tel"
+        onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+        type="number"
+      >
         <template slot="prepend">电话</template>
       </el-input>
       <br />
-      <el-input placeholder="请输入内容" v-model="userinfo[0].email">
+      <el-input
+        placeholder="请输入内容"
+        v-model="userinfo[0].email"
+        type="email"
+      >
         <template slot="prepend">邮箱</template>
       </el-input>
       <el-row>

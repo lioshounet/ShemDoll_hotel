@@ -79,7 +79,14 @@ $inputh:50px;
                     color: $gree-color;
                     height: $inputh;    
                 }
-              
+                //去掉加减按钮
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+                input[type="number"] {
+                    -moz-appearance: textfield;
+                }  
             }
             ::-webkit-input-placeholder{
                 color:$gree-color;

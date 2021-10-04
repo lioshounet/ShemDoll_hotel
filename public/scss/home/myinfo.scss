@@ -54,6 +54,16 @@ $headimgsize:278px;
             font-size: 22px;
             height: 50px;
         }
+        //取消加减按钮
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }  
+
+        //提示字的颜色
         ::-webkit-input-placeholder{
             color:$gree-color;
         }
