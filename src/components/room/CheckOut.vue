@@ -39,7 +39,7 @@
       </el-tab-pane>
       <el-tab-pane label="正在使用" name="second">
         <div class="useing">
-          <el-card class="box-card" v-for="card in uselist">
+          <el-card class="box-card" v-for="(card, index) in uselist">
             <div slot="header" class="clearfix">
               <span>{{ card.hotlename }}</span>
               <div style="float: right">
@@ -71,21 +71,25 @@
                   <p>申诉房间号</p>
                   <el-input
                     placeholder="请输入内容"
+                    v-model="card.roomnmb"
+                    :disabled="true"
+                    clearable
+                  >
+                  </el-input>
+                  <p>酒店名称</p>
+                  <el-input
+                    placeholder="请输入内容"
                     v-model="card.hotlename"
                     :disabled="true"
                     clearable
                   >
                   </el-input>
-                  <p>地址</p>
-                  <el-input
-                    placeholder="请输入内容"
-                    v-model="card.where"
-                    :disabled="true"
-                    clearable
+                  <div
+                    :class="{ upappeal: index === clickIndex }"
+                    @click="upappeal(index)"
                   >
-                  </el-input>
-
-                  <el-button>提交</el-button>
+                    <el-button>提交</el-button>
+                  </div>
                 </el-dialog>
                 <el-button
                   style="padding: 3px 0; font-size: 18px; margin-left: 10px"
@@ -211,7 +215,7 @@
             </div>
             <div class="givepoint">
               <span class="demonstration">给我打分</span>
-              <el-rate v-model="value2" :colors="colors"> </el-rate>
+              <el-rate v-model="card.point" :colors="colors"> </el-rate>
             </div>
           </el-card>
         </div>
@@ -334,15 +338,15 @@ export default {
       //-----------------------------下拉框的数据-------------------------------------------
       reasonchoose: [
         {
-          value: "选项1",
+          value: "bookc",
           label: "预订取消",
         },
         {
-          value: "选项2",
+          value: "nouse",
           label: "使用纠纷",
         },
         {
-          value: "选项3",
+          value: "other",
           label: "其他原因",
         },
       ],
@@ -350,8 +354,67 @@ export default {
     };
   },
   methods: {
+    //申诉按钮打开对话
     handleClick(tab, event) {
       console.log(tab, event);
+    },
+    upappeal(index) {
+      console.log(index);
+      //防止重复请求的校验   还没做
+      this.$confirm("是否提交？", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning",
+      })
+        .then(() => {
+          // console.log("成功");
+          //增加json内容----加的功能
+          // var appurl = "";
+          // console.log(this.reason);
+          axios({
+            method: "POST",
+            url: "http://localhost:3000/appeal_" + this.reason,
+            data: {
+              hotlename: this.uselist[index].hotlename,
+              nmb: this.uselist[index].roomnmb,
+              price: this.uselist[index].price,
+              reason: this.whyapp,
+              link: this.uselist[index].link,
+            },
+          }).then((response) => {
+            console.log(response.data);
+          });
+          this.$message({
+            type: "success",
+            message: "提交成功!",
+          });
+        })
+        .catch(() => {
+          console.log("提交取消");
+          this.$message({
+            type: "info",
+            message: "取消提交",
+          });
+        });
+    },
+    pointup() {
+      axios({
+        method: "POST",
+        url: "http://localhost:3000/overlist",
+        data: {
+          hotlename: "艾尔迪亚大酒店",
+          nmb: "404",
+          point: 1,
+          link: "/img/room/hotel-1979406_1920.png",
+          id: 1,
+        },
+      }).then((response) => {
+        console.log(response.data);
+      });
+      this.$message({
+        type: "success",
+        message: "提交成功!",
+      });
     },
   },
 };
