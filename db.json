@@ -278,5 +278,44 @@
       "reason": "多吃肉蛋奶",
       "link": "/img/fun/sausages-3524649_1920.png"
     }
+  ],
+  "appeal_bookc": [
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "nmb": "404",
+      "price": "44",
+      "reason": "房间漏水，wifi不行，晚上柜子动了，隔壁有tm嘉心糖",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "id": 1
+    }
+  ],
+  "appeal_nouse": [
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "nmb": "404",
+      "price": "44",
+      "reason": "房间漏水，wifi不行，晚上柜子动了，隔壁有tm嘉心糖",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "id": 1
+    }
+  ],
+  "appeal_other": [
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "nmb": "404",
+      "price": "44",
+      "reason": "房间漏水，wifi不行，晚上柜子动了，隔壁有tm嘉心糖",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "id": 1
+    }
+  ],
+  "overlist": [
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "nmb": "404",
+      "point": 0,
+      "link": "/img/room/hotel-1979406_1920.png",
+      "id": 1
+    }
   ]
 }

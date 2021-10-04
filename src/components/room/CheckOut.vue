@@ -131,7 +131,7 @@
                   <div
                     v-for="(item, o, i) in card"
                     :key="o"
-                    v-if="i != 4"
+                    v-if="i != 4 && o != 'id'"
                     class="text item"
                   >
                     {{ acardmarklist[i] + ":" + item }}
@@ -154,7 +154,7 @@
                   <div
                     v-for="(item, o, i) in card"
                     :key="o"
-                    v-if="i != 4"
+                    v-if="i != 4 && o != 'id'"
                     class="text item"
                   >
                     {{ acardmarklist[i] + ":" + item }}
@@ -177,7 +177,7 @@
                   <div
                     v-for="(item, o, i) in card"
                     :key="o"
-                    v-if="i != 4"
+                    v-if="i != 4 && o != 'id'"
                     class="text item"
                   >
                     {{ acardmarklist[i] + ":" + item }}
@@ -253,23 +253,64 @@ export default {
       method: "GET",
       url: "http://localhost:3000/uselist",
     }).then((response) => {
-      console.log("233");
       _this.uselist = response.data;
       // console.log(response.data.storroom);
     });
 
-    this.$http.get("json/room/myroom/appeal/bookc.json").then(function (res) {
-      _this.bookclist = res.data;
+    // this.$http.get("json/room/myroom/appeal/bookc.json").then(function (res) {
+    //   _this.bookclist = res.data;
+    // });
+
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/appeal_bookc",
+    }).then((response) => {
+      _this.bookclist = response.data;
+      // console.log(response.data.storroom);
     });
-    this.$http.get("json/room/myroom/appeal/nouse.json").then(function (res) {
-      _this.nouselist = res.data;
+
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/appeal_nouse",
+    }).then((response) => {
+      _this.nouselist = response.data;
+      // console.log(response.data.storroom);
     });
-    this.$http.get("json/room/myroom/appeal/other.json").then(function (res) {
-      _this.otherlist = res.data;
+
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/appeal_other",
+    }).then((response) => {
+      _this.otherlist = response.data;
+      // console.log(response.data.storroom);
     });
-    this.$http.get("json/room/myroom/overlist.json").then(function (res) {
-      _this.overlist = res.data;
+
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/appeal_over",
+    }).then((response) => {
+      _this.overlist = response.data;
+      // console.log(response.data.storroom);
     });
+
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/overlist",
+    }).then((response) => {
+      _this.overlist = response.data;
+      // console.log(response.data.storroom);
+    });
+    // this.$http.get("json/room/myroom/appeal/nouse.json").then(function (res) {
+    //   _this.nouselist = res.data;
+    // });
+
+    // this.$http.get("json/room/myroom/appeal/other.json").then(function (res) {
+    //   _this.otherlist = res.data;
+    // });
+
+    // this.$http.get("json/room/myroom/overlist.json").then(function (res) {
+    //   _this.overlist = res.data;
+    // });
     return {
       //用户基本信息返回
       userinfo: [],
