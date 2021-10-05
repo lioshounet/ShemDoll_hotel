@@ -100,7 +100,7 @@
   font-size: 15px;
 }
 
-.overboxs .box-card .givepoint {
+.overboxs .box-card #givepoint {
   float: left;
   width: 44%;
   height: 15%;
@@ -108,18 +108,18 @@
   margin-left: 28%;
 }
 
-.overboxs .box-card .givepoint .demonstration {
+.overboxs .box-card #givepoint .demonstration {
   display: inline-block;
   font-size: 25px;
   margin-left: 25%;
   margin-bottom: 10%;
 }
 
-.overboxs .box-card .givepoint span {
+.overboxs .box-card #givepoint span {
   margin-left: 5%;
 }
 
-.overboxs .box-card .givepoint i:before {
+.overboxs .box-card #givepoint i:before {
   font-size: 25px;
 }
 

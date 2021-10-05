@@ -194,7 +194,7 @@
       >
       <el-tab-pane label="结束订单" name="fourth">
         <div class="overboxs">
-          <el-card class="box-card" v-for="card in overlist">
+          <el-card class="box-card" v-for="(card, index) in overlist">
             <div slot="header" class="clearfix">
               <span>{{ card.hotlename }}</span>
               <!-- <el-button style="float: right; padding: 3px 0" type="text"
@@ -213,7 +213,11 @@
                 {{ cardmarklist[i] + ":" + item }}
               </div>
             </div>
-            <div class="givepoint">
+            <div
+              id="givepoint"
+              :class="{ pointup: index === clickIndex }"
+              @click="pointup(index)"
+            >
               <span class="demonstration">给我打分</span>
               <el-rate v-model="card.point" :colors="colors"> </el-rate>
             </div>
@@ -286,14 +290,6 @@ export default {
       url: "http://localhost:3000/appeal_other",
     }).then((response) => {
       _this.otherlist = response.data;
-      // console.log(response.data.storroom);
-    });
-
-    axios({
-      method: "GET",
-      url: "http://localhost:3000/appeal_over",
-    }).then((response) => {
-      _this.overlist = response.data;
       // console.log(response.data.storroom);
     });
 
@@ -397,23 +393,22 @@ export default {
           });
         });
     },
-    pointup() {
+    pointup(index) {
+      console.log(index);
+
       axios({
-        method: "POST",
-        url: "http://localhost:3000/overlist",
+        method: "PUT",
+        url: "http://localhost:3000/overlist/" + String(index + 1),
         data: {
-          hotlename: "艾尔迪亚大酒店",
-          nmb: "404",
-          point: 1,
+          hotlename: this.overlist[index].hotlename,
+          nmb: this.overlist[index].nmb,
+          point: this.overlist[index].point,
           link: "/img/room/hotel-1979406_1920.png",
-          id: 1,
         },
       }).then((response) => {
         console.log(response.data);
-      });
-      this.$message({
-        type: "success",
-        message: "提交成功!",
+        //此处可以优化
+        location.reload();
       });
     },
   },
