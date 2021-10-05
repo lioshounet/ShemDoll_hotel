@@ -365,8 +365,6 @@ export default {
         .then(() => {
           // console.log("成功");
           //增加json内容----加的功能
-          // var appurl = "";
-          // console.log(this.reason);
           axios({
             method: "POST",
             url: "http://localhost:3000/appeal_" + this.reason,
@@ -378,11 +376,15 @@ export default {
               link: this.uselist[index].link,
             },
           }).then((response) => {
+            axios({
+              method: "delete",
+              url: "http://localhost:3000/uselist/" + String(index + 1),
+            });
             console.log(response.data);
           });
           this.$message({
             type: "success",
-            message: "提交成功!",
+            message: "提交成功!请在申诉栏查看详细情况",
           });
         })
         .catch(() => {
