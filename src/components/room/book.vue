@@ -79,9 +79,34 @@ export default {
       url: "http://localhost:3000/storroom",
     }).then((response) => {
       _this.roomlist = response.data;
-      console.log(_this.roomlist[0]);
+      // console.log(_this.roomlist[0]);
       // console.log(response.data.storroom);
     });
+
+    //----------------------拦截器-----------------------------
+    axios.interceptors.request.use(
+      (config) => {
+        if (config.method != "post") {
+          // console.log(config.key);
+          // console.log("拦截器启动成功,方法非post");
+          console.log(config);
+          return config;
+        } else {
+          console.log("检测到post方法");
+          if (config.key == "KOI333") {
+            console.log("KEY正确");
+            return config;
+          } else {
+            alert("非法post");
+            console.log("非法post");
+            // return null;
+          }
+        }
+      },
+      (err) => {
+        console.log("拦截器启动失败");
+      }
+    );
 
     return {
       roomlist: [],
@@ -122,6 +147,7 @@ export default {
           axios({
             method: "POST",
             url: "http://localhost:3000/bookroom",
+            key: "KOI333",
             data: {
               hotlename: this.roomlist[idnmb].hotlename,
               roomnmb: this.roomlist[idnmb].roomnmb,
@@ -132,7 +158,7 @@ export default {
               end: this.thetime[1],
             },
           }).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
           });
           this.$message({
             type: "success",
