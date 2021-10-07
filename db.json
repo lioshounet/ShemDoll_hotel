@@ -4,7 +4,7 @@
       "age": "18",
       "bgimg": "/img/userinfo/indoors-4234071_1920.png",
       "headimg": "/img/userinfo/QQ图片20210912172644.jpg",
-      "monney": "1221",
+      "monney": "62299",
       "userID": "001",
       "name": "害怕讲ppt的肖江",
       "email": "1090057105@qq.com",
@@ -78,116 +78,20 @@
       "nmb": "F458963215655658"
     },
     {
-      "date": "2021-8-29 14:58:46",
+      "date": "2021-9-7 14:27:6",
       "RevenueExpenditure": "收入",
-      "howmach": "",
+      "howmach": "555",
       "where": "直接充值",
       "nmb": "F458963215655658",
       "id": 2
     },
     {
-      "date": "2021-8-29 14:59:24",
+      "date": "2021-9-7 14:27:12",
       "RevenueExpenditure": "收入",
-      "howmach": "efeg",
-      "where": "直接充值",
-      "nmb": "F458963215655658",
+      "howmach": 3,
+      "where": "KEY",
+      "nmb": "555555",
       "id": 3
-    },
-    {
-      "date": "2021-8-29 15:0:4",
-      "RevenueExpenditure": "收入",
-      "howmach": "efef",
-      "where": "直接充值",
-      "nmb": "F458963215655658",
-      "id": 4
-    },
-    {
-      "date": "2021-8-29 15:7:17",
-      "RevenueExpenditure": "收入",
-      "howmach": 0.31144288718031987,
-      "where": "KEY",
-      "nmb": "F458963215655658",
-      "id": 5
-    },
-    {
-      "date": "2021-8-29 15:8:0",
-      "RevenueExpenditure": "收入",
-      "howmach": 0.22569054890546458,
-      "where": "KEY",
-      "nmb": "F458963215655658",
-      "id": 6
-    },
-    {
-      "date": "2021-8-29 15:8:19",
-      "RevenueExpenditure": "收入",
-      "howmach": 0.8389548386401375,
-      "where": "KEY",
-      "nmb": "SRrg",
-      "id": 7
-    },
-    {
-      "date": "2021-8-29 17:46:56",
-      "RevenueExpenditure": "收入",
-      "howmach": "",
-      "where": "直接充值",
-      "nmb": "F458963215655658",
-      "id": 8
-    },
-    {
-      "date": "2021-9-3 17:54:4",
-      "RevenueExpenditure": "收入",
-      "howmach": "555",
-      "where": "直接充值",
-      "nmb": "F458963215655658",
-      "id": 9
-    },
-    {
-      "date": "2021-9-3 18:11:55",
-      "RevenueExpenditure": "收入",
-      "howmach": 3,
-      "where": "KEY",
-      "nmb": "dsvsegergr",
-      "id": 10
-    },
-    {
-      "date": "2021-9-3 18:12:17",
-      "RevenueExpenditure": "收入",
-      "howmach": 2,
-      "where": "KEY",
-      "nmb": "sveefef",
-      "id": 11
-    },
-    {
-      "date": "2021-9-3 18:12:35",
-      "RevenueExpenditure": "收入",
-      "howmach": 3,
-      "where": "KEY",
-      "nmb": "Srgegegef",
-      "id": 12
-    },
-    {
-      "date": "2021-9-4 10:7:5",
-      "RevenueExpenditure": "收入",
-      "howmach": "ddddd",
-      "where": "直接充值",
-      "nmb": "F458963215655658",
-      "id": 13
-    },
-    {
-      "date": "2021-9-4 10:7:24",
-      "RevenueExpenditure": "收入",
-      "howmach": null,
-      "where": "直接充值",
-      "nmb": "F458963215655658",
-      "id": 14
-    },
-    {
-      "date": "2021-9-4 10:22:29",
-      "RevenueExpenditure": "收入",
-      "howmach": "444",
-      "where": "直接充值",
-      "nmb": "F458963215655658",
-      "id": 15
     }
   ],
   "uselist": [
