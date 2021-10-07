@@ -87,6 +87,32 @@ export default {
       _this.costData = response.data;
       // console.log(response.data.storroom);
     });
+
+    //-------------拦截器------------------------
+    axios.interceptors.request.use(
+      (config) => {
+        if (config.method == "get") {
+          // console.log(config.key);
+          // console.log("拦截器启动成功,方法非post");
+          console.log(config);
+          return config;
+        } else {
+          console.log("检测到post或者put方法");
+          if (config.key == "KOI333") {
+            console.log("KEY正确");
+            return config;
+          } else {
+            alert("非法post/put");
+            console.log("非法post/put");
+            // return null;
+          }
+        }
+      },
+      (err) => {
+        console.log("拦截器启动失败");
+      }
+    );
+
     return {
       //用户基本信息返回
       userinfo: [],
@@ -105,6 +131,7 @@ export default {
       axios({
         method: "POST",
         url: "http://localhost:3000/costdata",
+        key: "KOI333",
         data: {
           date:
             String(paytime.getFullYear()) +
@@ -131,6 +158,7 @@ export default {
       axios({
         method: "PUT",
         url: "http://localhost:3000/userinfo/1",
+        key: "KOI333",
         data: {
           age: this.userinfo[0].age,
           bgimg: this.userinfo[0].bgimg,
@@ -145,15 +173,19 @@ export default {
           // id: 1,
         },
       }).then((response) => {
-        _this.costData = response.data;
+        // _this.costData = response.data;
+        this.$message("充值成功，添加金额：" + String(Number(this.RealMoney)));
       });
     },
+
+    //-------------------key充值----------------------------
     KeyPut() {
       var keytime = new Date();
       this.CostCodeDialog = true;
       axios({
         method: "POST",
         url: "http://localhost:3000/costdata",
+        key: "KOI333",
         data: {
           date:
             String(keytime.getFullYear()) +
@@ -173,12 +205,13 @@ export default {
           nmb: this.keynmb,
         },
       }).then((response) => {
-        _this.costData = response.data;
+        // _this.costData = response.data;
       });
 
       axios({
         method: "PUT",
         url: "http://localhost:3000/userinfo/1",
+        key: "KOI333",
         data: {
           age: this.userinfo[0].age,
           bgimg: this.userinfo[0].bgimg,
@@ -194,7 +227,11 @@ export default {
           // id: 1,
         },
       }).then((response) => {
-        _this.costData = response.data;
+        this.$message(
+          "充值成功,金额：" + String(Math.round(Math.random() * 10))
+        );
+        // this.$message("这是一条消息提示");
+        // _this.costData = response.data;
       });
     },
   },
