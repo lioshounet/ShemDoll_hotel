@@ -9,13 +9,13 @@
   </div>
 </template>
 <script>
-import myinfo from "./components/home/myinfo";
-import wallet from "./components/home/wallet";
-import book from "./components/room/book";
-import CheckOut from "./components/room/CheckOut";
-import funroom from "./components/fun/funroom";
-import food from "./components/fun/food";
-import Msg from "./msg.js";
+import myinfo from "./../components/home/myinfo";
+import wallet from "./../components/home/wallet";
+import book from "./../components/room/book";
+import CheckOut from "./../components/room/CheckOut";
+import funroom from "./../components/fun/funroom";
+import food from "./../components/fun/food";
+import Msg from "./../msg";
 export default {
   components: { myinfo, wallet, book, CheckOut, funroom, food },
   data() {
