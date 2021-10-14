@@ -16,6 +16,7 @@
         </el-input>
         <div>
           <!-- <router-link to="/views/theapp"> -->
+          <!-- 测试---------- -->
           <el-button @click="login()">登录</el-button>
           <!-- </router-link> -->
         </div>
