@@ -16,7 +16,6 @@
         </el-input>
         <div>
           <!-- <router-link to="/views/theapp"> -->
-          <!-- 测试---------- -->
           <el-button @click="login()">登录</el-button>
           <!-- </router-link> -->
         </div>
@@ -46,6 +45,8 @@ export default {
       if (this.conmt != "" && this.passwd != "") {
         this.show = "none";
         this.$router.push({ path: "/views/theapp" });
+      } else {
+        this.$message.error("账号或者密码为空");
       }
     },
   },
