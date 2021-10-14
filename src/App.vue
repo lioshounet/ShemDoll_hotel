@@ -15,9 +15,9 @@
           <template slot="prepend">密码</template>
         </el-input>
         <div>
-          <router-link to="/views/theapp">
-            <el-button @click="login()">登录</el-button>
-          </router-link>
+          <!-- <router-link to="/views/theapp"> -->
+          <el-button @click="login()">登录</el-button>
+          <!-- </router-link> -->
         </div>
       </el-card>
     </div>
@@ -44,7 +44,7 @@ export default {
     login() {
       if (this.conmt != "" && this.passwd != "") {
         this.show = "none";
-        this.$router.push({ name: "PersonalView" });
+        this.$router.push({ path: "/views/theapp" });
       }
     },
   },

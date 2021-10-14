@@ -7,6 +7,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/views/theapp',
+    name: "the_app",
     component: the_app
   }
 ]
