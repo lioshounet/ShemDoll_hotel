@@ -102,14 +102,6 @@
       "price": "44",
       "where": "希尔雅区689号",
       "link": "/img/room/hotel-1979406_1920.png"
-    },
-    {
-      "id": 2,
-      "hotlename": "艾尔迪亚大酒店",
-      "roomnmb": "404",
-      "price": "44",
-      "where": "希尔雅区689号",
-      "link": "/img/room/hotel-1979406_1920.png"
     }
   ],
   "profile": {
@@ -167,6 +159,14 @@
       "reason": "ssssss",
       "link": "/img/room/hotel-1979406_1920.png",
       "id": 2
+    },
+    {
+      "hotlename": "艾尔迪亚大酒店",
+      "nmb": "404",
+      "price": "44",
+      "reason": "k",
+      "link": "/img/room/hotel-1979406_1920.png",
+      "id": 3
     }
   ],
   "appeal_nouse": [
