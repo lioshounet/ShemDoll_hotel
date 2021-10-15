@@ -232,6 +232,9 @@
 </style>
 <script>
 const axios = require("axios");
+
+let CancelFlage = null;
+
 export default {
   // name: "ShemHotelWallet",
   components: {},
@@ -367,6 +370,7 @@ export default {
           //增加json内容----加的功能
           axios({
             method: "POST",
+            key: "KOI333",
             url: "http://localhost:3000/appeal_" + this.reason,
             data: {
               hotlename: this.uselist[index].hotlename,
@@ -376,11 +380,14 @@ export default {
               link: this.uselist[index].link,
             },
           }).then((response) => {
+            CancelFlage = null;
             axios({
               method: "delete",
+              key: "KOI333",
               url: "http://localhost:3000/uselist/" + String(index + 1),
             });
             console.log(response.data);
+            this.AppealSteps = null;
           });
           this.$message({
             type: "success",
@@ -400,6 +407,7 @@ export default {
 
       axios({
         method: "PUT",
+        key: "KOI333",
         url: "http://localhost:3000/overlist/" + String(index + 1),
         data: {
           hotlename: this.overlist[index].hotlename,
