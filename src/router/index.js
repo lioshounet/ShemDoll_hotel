@@ -1,15 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import the_app from '../views/theapp.vue'
+import Login from '../views/Login.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/views/theapp',
-    name: "the_app",
-    component: the_app
-  }
+    path: '/',
+    name: "Login",
+    component: Login
+  },
+  {
+    path: '/theapp',
+    name: 'theapp',
+    component: () => import(/* webpackChunkName: "about" */ '../views/theapp.vue')
+  },
 ]
 
 const router = new VueRouter({
